@@ -1,0 +1,1273 @@
+/*Link da fonte da letra*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+/*Aqui contem a fonte da letra e outras formatações da pagina*/
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/*Colocamos uma cor de fundo no site*/
+.landing-page-principal {
+    background-color: rgb(88, 88, 88);
+}
+
+/*-----------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*Aqui começa a parte do (Grid) das paginas*/
+
+/*Colocamos o grid principal */
+.principal {
+    display: grid;
+    grid-template-areas:
+        "cabe cabe cabe"
+        "lad lad corp"
+        "fund fund fund";
+    grid-template-columns: 15% auto 35%;
+    grid-template-rows: 150px auto auto;
+}
+
+/*Colocamos o grid na pagina de exercicios */
+.principal-exercicio {
+    display: grid;
+    grid-template-areas:
+        "cabe cabe cabe"
+        "corpo corpo corpo"
+        "fund fund fund";
+    grid-template-columns: auto auto auto;
+    grid-template-rows: 150px auto auto;
+    grid-gap: 2rem;
+}
+
+/*Colocamos o grid no cadastro */
+.cadastro {
+    display: grid;
+    grid-template-areas:
+        "cabe cabe cabe"
+        "prin prin prin"
+        "fund fund fund";
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto 550px 270px;
+    grid-gap: 2rem;
+}
+
+/*Colocamos o grid no questionario */
+.questionário {
+    display: grid;
+    grid-template-areas:
+        "cabe cabe cabe"
+        "corpo corpo corpo"
+        "fund fund fund";
+    grid-template-columns: auto auto auto;
+    grid-template-rows: 150px auto auto;
+    grid-gap: 2rem;
+}
+
+/*Colocamos o grid no questionario */
+.pai-calculo {
+    display: grid;
+    grid-template-areas:
+        "cabe cabe cabe"
+        "corp corp corp"
+        "fund fund fund";
+    grid-template-columns: auto auto auto;
+    grid-template-rows: 150px 65% auto;
+    grid-gap: 2rem;
+}
+
+/*-----------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*Aqui começa o Header*/
+
+/*Colocamos o grid no header da pagina principal junto com uma cor de fundo, tambem adicionamos uma altura parea o header e colocamos os elementos separados*/
+.header-principal {
+    grid-area: cabe;
+    width: auto;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+    background-color: rgb(88, 88, 88);
+}
+
+/*Colocamos isso para o elemento não aparecer no site */
+#chk1 {
+    display: none;
+}
+
+/*Colocamos uma cor nos icones e um cursor pointer para quando ficar em cima aparecer uma mão para clicar*/
+i {
+    color: #fff;
+    cursor: pointer;
+}
+
+/*Colocamos uma cor nas palavras junto com um tamnho de letra definifa com uma distancia eem relaçlão a esquerda*/
+header .logo {
+    flex: 1;
+    color: #fff;
+    margin-left: 50px;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+/*Colocamos uma distancia do elemento em relasção ao topo junto com um espaçamento dos elementos e deixamos o elemento flexivel*/
+.header-principal ul {
+    flex: 2;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 25px;
+}
+
+/*Colocamos iso para nao aparecer a bolinha do Ul*/
+.header-principal ul li {
+    list-style: none;
+}
+
+/*Colocamos uma cor nas palavras junto com um tamanho de letra definida também tiramos o sublinafo que tem nos links com uma distancia da esquerda e direita e cima baixo */
+.header-principal ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    padding-block: 5px;
+    transition: all 1s ease;
+    padding: 10px 15px;
+}
+
+/*Colocamos uma cor nas palavras*/
+.header-principal ul li a:hover {
+    color: #fff;
+}
+
+/*Colocamos o elemento como se fosse um bloco junto com uma cor de fundo também arrendondamos as bordas junto com uma transição*/
+.header-principal ul li a::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 4px;
+    border-radius: 200px;
+    background: #fff;
+    transition: all 1s ease;
+}
+
+/*Colocamos uma largura no elemento*/
+.header-principal ul li a:hover::after {
+    width: 80%;
+}
+
+/*Colocamos um tamanho de letra definida junto com um display none que faz com que o elemento desapareça do site*/
+header .menu {
+    font-size: 2.5em;
+    display: none;
+}
+
+/*-----------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*Aqui começa a parte do (MAIN)*/
+
+/*Usamos o nome corpo para chamar o grid no main*/
+.corpo {
+    grid-area: corp;
+    width: 95%;
+    padding: 20px 20px;
+}
+
+/*Modificações Aside*/
+.aside-principal {
+    grid-area: lad;
+    width: 80%;
+    margin-left: 10%;
+}
+
+/*Modificações Aside*/
+.info-aside {
+    position: sticky;
+    top: 170px;
+}
+
+.transition a{
+    transition: 1s ease;
+}
+
+.transition:hover{
+    color: blue;
+}
+
+/*Modificações Aside*/
+.info-aside ul li{
+    list-style: none;
+}
+
+/*Modifica a (fonte) da letra / (alinhamento) do titulo*/
+.primeiro-titulo {
+    margin-top: -35px;
+    text-align: center;
+    overflow: hidden;
+    font-size: clamp(1em, 1em + 1vw, 1.5em);
+    color: black;
+}
+
+/*Coloquei um (background) / (content) que sao os riscos / (display) para ficar na mesma linha que a palavra / (tamanho) do risco / (position) a posição / (vertical) para dizer que ficar no meio / (porcentagem) da linha da distancia */
+.primeiro-titulo:before,
+.primeiro-titulo:after {
+    background-color: #000;
+    content: "";
+    display: inline-block;
+    height: 1px;
+    position: relative;
+    vertical-align: middle;
+    width: 20%;
+}
+
+/*Adicionei a (porcentagem) de risco do lado esquerdo e a (distancia) da palvra no caso right 0,5*/
+.primeiro-titulo:before {
+    right: 0.5em;
+    margin-left: -50%;
+}
+
+/*Adicionei a (porcentagem) de risco do lado direito e a (distancia) da palavra no caso right 0,5*/
+.primeiro-titulo:after {
+    left: 0.5em;
+    margin-right: -50%;
+}
+
+/*Alteramos a cor das palavras e colocamos as palavras no centro*/
+main h1 {
+    color: rgb(48, 47, 47);
+    text-align: center;
+}
+
+/*Colocamos os textos no centro e uma distancia do topo*/
+#colocar_nome {
+    text-align: center;
+    margin-top: -45px;
+}
+
+/*Colocamos uma distancia entre as letras e também adicionamos uma distancia dos elementos e outra para as bordas*/
+.informacoes_gerais {
+    padding: 20px;
+    margin: 15px;
+    letter-spacing: 0.1rem;
+}
+
+/*Colocamos uma cor nas palavras junto com um tamanho de letra definido*/
+.exemplos p {
+    margin: 10px;
+    color: black;
+    font-size: 17px;
+}
+
+/*Colocamos uma cor nas palavras junto com o texto no centro*/
+.paragrafo-1 p {
+    text-align: center;
+    color: black;
+}
+
+/*Colocamos uma cor nas palavras junto com o texto no centro e também deixammos um espaçamento entre os elementos*/
+.informacoes-gerais h2 {
+    margin: 15px;
+    color: black;
+    text-align: center;
+}
+
+/*Colocamos o texto no centro e um tamnho de letra definido*/
+.lista-1 {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+/*Colocamos os textos no centro*/
+.imagem-equaçao {
+    text-align: center;
+}
+
+/*Colocamos os textos no centro*/
+.pai-conteudo {
+    text-align: center;
+}
+
+/*Colocamos uma cor nas palavras*/
+#marcacao_nome {
+    color: black;
+}
+
+/*-----------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*-----------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*Aqui começa a parte do (MAIN-EXERCICIO)*/
+
+/*Colocamos o grid no main do exercicio junto com uma largura definida*/
+.main-exercicios {
+    grid-area: corpo;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*Colocamos uma largura definida  junto com uma posição relativa junto com os textos no centro também deixamos as bordas arrendondadas junto com uma distancia do topo*/
+.exercicios-div {
+    width: 90%;
+    position: relative;
+    border-radius: 15px;
+    padding-bottom: 5px;
+    text-align: center;
+    padding-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*Colocamos os textos alinhados na esquerda junto com uma distancia da borda*/
+.info_questao {
+    text-align: left;
+    padding-left: 36%;
+}
+
+/*Colocamos uma cor de fundo junto com os textos alinhados no centro*/
+.verde {
+    background-color: green;
+    color: #fff;
+    text-align: center;
+}
+
+/*Colocamos uma cor de fundo junto com os textos alinhados no centro*/
+.vermelho {
+    background-color: red;
+    color: #fff;
+    text-align: center;
+}
+
+/*Colocamos uma borda no elemento junto com uma posição relativa e um espaço da borda*/
+.button-exercicio {
+    text-decoration: none;
+    font-size: 25px;
+    color: black;
+    padding: 5px 50px;
+    border: solid 2px black;
+    position: relative;
+}
+
+/*Colocamos uma altura e largura definida no elemento junto com uma posição absoluta e também tem uma transção de 5s*/
+.button-exercicio::before,
+.button-exercicio::after {
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border: inherit;
+    transition: all .5s;
+}
+
+/*Colocamos uma borda nop elemento e posicionamos ele com as tags top e left*/
+.button-exercicio::before {
+    top: -15px;
+    left: -15px;
+    border-width: 3px 0 0 3px;
+}
+
+/*Colocamos uma borda nop elemento e posicionamos ele com as tags top e left*/
+.button-exercicio::after {
+    bottom: -15px;
+    right: -15px;
+    border-width: 0 3px 3px 0;
+}
+
+/*Colocamos uma altura e largura definida no elemento*/
+.button-exercicio:hover::before,
+.button-exercicio:hover::after {
+    width: calc(100% + 27px);
+    height: calc(100% + 27px);
+}
+
+/*Colocamos uma cor de fundo e mudamos a cor das palavras*/
+.acertos {
+    background-color: rgb(88, 88, 88);
+    color: #fff;
+}
+
+/*Colocamos uma altura e largura definida no elemento junto com uma borda e uma distancia de outros elementos*/
+.Questio-01 {
+    border: 1px solid black;
+    width: 20%;
+    height: 5vh;
+    margin: 20px;
+}
+
+/*Colocamos o elemento com distancia automatica das bordas*/
+.question-2 {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*Colocamos uma cor de fundo junto com uma cor nas palavras tambem deixamos os textos alinhados no centro*/
+.verde1 {
+    background-color: green;
+    border-radius: 10px;
+    color: #fff;
+    text-align: center;
+}
+
+/*Colocamos uma cor de fundo junto com uma cor nas palavras tambem deixamos os textos alinhados no centro*/
+.vermelho1 {
+    background-color: red;
+    border-radius: 10px;
+    color: #fff;
+    text-align: center;
+}
+
+/*Colocamos um tamanho de letra especifico junto com uma distancia da borda e arrendondamos a borda do elemento*/
+.black-button {
+    color: black;
+    padding: 10px 5px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/*Colocamos */
+.butao-quest {
+    margin-left: 5%;
+}
+
+/*-----------------------------------------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*Aqui começa a parte do (FORMULARIO)*/
+
+/*Usamos o nome cad2 para chamar o grid no main*/
+.main-cadastro {
+    grid-area: prin;
+}
+
+/*Colocamos os item no centro do site*/
+#main-cadastro {
+    width: 100hv;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+/*Colocamos uma altura e largura definida com uma borda arrendondada e uma sombra*/
+.login-container {
+    height: 480px;
+    width: 768px;
+    box-shadow: 0 5px 20px #A0A0A0;
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+/*Colocamos uma altura e largura definida*/
+.form-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+/*Colocamos uma altura e largura definida junto com uma distancia da borda e colocamos os items em colunas*/
+.form {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 55px 0;
+    background-color: white;
+    transition: 1s;
+}
+
+/*Colocamos para que o elemento va para 100% no eixo horizontal*/
+.login-container.move .form-login {
+    transform: translateX(100%);
+}
+
+/*Colocamos para que o elemento va para 100% no eixo horizontal junto com uma opacidade de 0*/
+.form-registro {
+    transform: translateX(-100%);
+    z-index: -1;
+    opacity: 0;
+}
+
+/*colocamos para que o elemento se mova 0 no eixo horizontal junto com uma opacidade de 1*/
+.login-container.move .form-registro {
+    transform: translateX(0%);
+    z-index: 1;
+    opacity: 1;
+}
+
+/*Colocamos um tamanho de letra especifico junto com uma cor de letras*/
+.form-titulo {
+    font-size: 2.5rem;
+    font-weight: 400;
+    color: #000;
+}
+
+/*Colocamos uma cor nas letras*/
+.form-titulo-branco {
+    color: white;
+}
+
+/*Colocamos uma cor nas palavras*/
+.form-texto-branco {
+    color: white;
+}
+
+/*Tiramos os traços que fica em baixo do link*/
+#main-cadastro a {
+    text-decoration: none;
+    color: #000;
+}
+
+/*Colocamos os elementos flexiveis e uma distancia entre eles*/
+.form-icones {
+    display: flex;
+    gap: 24px;
+}
+
+/*Colocamos uma altura e largra definida junto com um tamanho de letra também colocamos uma cor de fundo e uma cor nas letras arrendondamos as bordas e colocamos o texto no centro */
+.icone-social {
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #b6b6b6;
+    box-shadow: 0 4px 4px #0004;
+    font-size: 1rem;
+    transition: 0.5s;
+}
+
+/*Colocamos uma cor de fundo e uma cor nas letras e também levantamos o elemento um pouco para cima*/
+.icone-social:hover {
+    color: white;
+    transform: translateY(-15%);
+}
+
+/*Colocamos o elemento flexivel em colunas e uma distancia entre eles*/
+.form-input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/*Colocamos uma altura e largura definida com uma distancia da borda junto com uma cor de fundo e uma borda*/
+.form-input {
+    width: 300px;
+    height: 40px;
+    padding: 10px 20px;
+    background-color: rgb(255, 255, 255);
+    border: solid 1px rgb(214, 214, 214);
+}
+
+/*Colocamos uma altura e largura definida com um tamanho de letra junto com uma borda arrendondada colocamos também uma transição*/
+.form-button {
+    width: 140px;
+    height: 40px;
+    border-radius: 50px;
+    border-style: none;
+    background-color: transparent;
+    border: 2px solid #000000;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.6s;
+}
+
+/*Colocamos uma borda no elemento e alteramos as cores das letras*/
+.form-button-light {
+    color: white;
+    border: 2px solid #e6e6e6;
+}
+
+/*Colocamos uma cor de fundo e deixamos as letras mais distantes uma da outra*/
+.form-button:hover {
+    letter-spacing: 1.15px;
+}
+
+
+/*Colocamos uma altura e largura definida com um display flexivel com o texto alinhado no centro também com uma distancia da borda e uma cor de fundojunto com uma transição*/
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 40px;
+    background-color: rgb(133, 133, 133);
+    transition: 1s;
+}
+
+/*Colocamos o z-index que especifica a ordem da pilha de um elemento do anúncio no site e a opacidade 0*/
+/*NTH-child significa seleciona um ou mais elementos com base em sua posição entre um grupo de elementos-irmãos, contando a partir do último*/
+.login-container.move .overlay:nth-child(2) {
+    z-index: -1;
+    opacity: 0;
+}
+
+/*Colocamos para ele não aparecer no site*/
+.mobile-text {
+    display: none;
+}
+
+/*Colocamos uma altura elargura definida com uma transição uma cor de letra e um valor para o elemento se mover 100% no eixo horizontal*/
+.overlay-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    color: black;
+    text-align: center;
+    transform: translateX(100%);
+    z-index: 10;
+    transition: 1s;
+}
+
+/*Colocamos para o elemento se mover 0% no eixo horizontal*/
+.login-container.move .overlay-container {
+    transform: translateX(0%);
+}
+
+/*-----------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*Aqui começa a parte do (FOOTER)*/
+
+/*Colocamos o grid no footerjunto com um texto alinhado no centro também colocamos uma distancia da borda colocamos um border radius para arrendondar apenas as pontas do footer*/
+footer {
+    grid-area: fund;
+    background-color: rgb(88, 88, 88);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    padding: 40px 100px 50px;
+    border-top-left-radius: 200px;
+    border-top-right-radius: 200px;
+}
+
+/*Colocamos uma distancia do fundo para o elemnto*/
+.redes-sociais {
+    margin-bottom: 20px;
+}
+
+/*Colocamos uma borda arrendondada e também alteramos o tamanho da letra*/
+.redes-sociais i {
+    font-size: 28px;
+    border: 2px solid white;
+    padding: 10px;
+    border-radius: 50%;
+    margin: 5px;
+    cursor: pointer;
+}
+
+/*Colocamos o elemento flexivel junto comuma responsividade e tiramos a bolinha da lista*/
+.link {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+/*Colocamos uma cor nas palavras tiramos o sublinado que tinha também alteramos o tamanho das letras*/
+.link a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 17px;
+}
+
+/*Colocamos uma distancia do elemento em relação ao topo e também alteramos o tamanho de letra*/
+.creditos {
+    font-size: 15px;
+    margin-top: 25px;
+}
+
+/*Colocamos uma animação infinita junto com uma cor de fundo, também demos uma altura e largura definifa para o elemento arrendondamos sua borda*/
+.line {
+    background-color: white;
+    width: 20px;
+    height: 6px;
+    margin-top: 1px;
+    border-radius: 40px;
+    position: relative;
+    animation: underline-animation 3s linear infinite;
+}
+
+/*Aqui é a animação da linha infinita*/
+@keyframes underline-animation {
+
+    /*Quando estiver 0% o elemento vai ficar -160px para esquerda e também ele vai ficar muito claro*/
+    0% {
+        left: -160px;
+        opacity: 0;
+    }
+
+    /*Quando estiver em 50% o elemento vai ficar um pouco mais escuro*/
+    50% {
+        opacity: 1;
+    }
+
+    /*Quando o elemento estiver em 100% o elemento vai ficar 160px para a esquerda voltando ao normal*/
+    100% {
+        left: 160px;
+    }
+}
+
+
+/*-----------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*Aqui começa a parte do (LANDING-PAGE)*/
+
+/*Colocamos uma distancia da borda e uma altura definida da pagina*/
+.container {
+    max-width: 1400px;
+    display: block;
+    margin: 0 auto;
+    padding: 0 3%;
+}
+
+/*Colocamos os item alinhados com uma distancia da borda*/
+#header-page {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+/*Colocamos o item sem aparecer no site e com uma cor de fundo transparente*/
+header .menu-icon {
+    background-color: transparent;
+    cursor: pointer;
+    display: none;
+}
+
+/*Colocamos uma altura e largura definida para a logo*/
+.logo img {
+    width: 220px;
+    height: 220px;
+}
+
+/*Alteramos a cor das palavras*/
+#main-page .esquerda h1 {
+    color: #fff;
+}
+
+/*Colocamos uma posição relativa*/
+nav {
+    position: relative;
+}
+
+/*Tiramos a bolinha que fica nas listas*/
+nav .menu-list {
+    list-style: none;
+}
+
+/*Colocamos uma distancia dele em relação ao topo com uma posição absoluta e deixamos o item sem aparecer no site apenas quando diminuir*/
+nav .menu-list .close-icon {
+    cursor: pointer;
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    display: none;
+}
+
+/*Colocamos para reposicionar o elemento na direção horizontal */
+nav.active .menu-list {
+    transform: translateX(0);
+}
+
+/*Colocamos um tamanho de letra definido junto com uma distancia da borda e um alinhamento das bases dos elementos*/
+nav .menu-list li {
+    display: inline-block;
+    padding: 20px;
+    font-size: 20px;
+}
+
+/*colocamos uma cor nas palavras junto com uma transição*/
+nav .menu-list a {
+    color: white;
+    text-decoration: none;
+    transition: all 0.5s;
+}
+
+/*Colocamos as letras mais distantes das outras*/
+nav .menu-list a:hover {
+    letter-spacing: 1px;
+}
+
+/*Colocamos uma distancia entre os elementos e um espaçamento*/
+#main-page {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/*Colocamos uma cor nas palavras com uma distancia da borda e uma largura de 50%*/
+#main-page .esquerda {
+    color: white;
+    width: 50%;
+    padding: 20px;
+}
+
+/*Colocamos um tramanho de letra definido jundo com uma distancia entre as letras*/
+main .esquerda h1 {
+    font-size: 4rem;
+    font-weight: lighter;
+    letter-spacing: 1px;
+}
+
+/*Colocamos um tamanho de letra definido junto com uma distancia entre os elementos*/
+#main-page .esquerda p {
+    font-size: 20px;
+    margin: 40px 0;
+}
+
+/*Colocamos uma distancia da borda e dos elementos com um tamanho de letra definifo e colocamos a cor da palavra mais fraca*/
+#main-page .esquerda .main_left-btn button {
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 10px;
+    border-radius: 20px;
+    font-weight: 500;
+    box-shadow: 0 20px 35px rgb(0, 0, 0, 10%), 0 15px 12px rgb(0, 0, 0, 8%);
+    background: rgb(187, 186, 186);
+    color: rgb(0, 0, 0);
+    transition: all 0.5s;
+}
+
+/*Colocamos uma cor de fundo e uma cor nas palavras com uma distancia entre as letras*/
+#main-page .esquerda .main_left-btn button:hover {
+    background-color: rgb(255, 254, 255);
+    color: black;
+    letter-spacing: 1px;
+}
+
+/*-----------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*Media scren*/
+
+/*Media scren (1330 pixels)*/
+@media only screen and (max-width: 1330px) {
+
+    /*Alteramos o grid do site principal*/
+    .principal {
+        grid-template-areas:
+            "cabe cabe cabe"
+            "lad lad lad"
+            "fund fund fund";
+        grid-template-columns: 3fr;
+        grid-template-rows: 150px auto auto;
+    }
+
+    .corpo{
+        display: none;
+    }
+
+    /*Retirei o titulo da loja principal e posicionei*/
+    .primeiro-titulo {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* Ajustamos o tamanho do riscodo titulo para 5% em telas menores */
+    .primeiro-titulo:before,
+    .primeiro-titulo:after {
+        width: 5%;
+    }
+
+    /*Tiramos o elemento do site*/
+    .line1 {
+        display: none;
+    }
+
+    /*Colocamos o elemento em uma posição fixa com uma distancia do topo, também adicionamos uma cor de fundo, adicionamo uma largura e altura para o elemento junto com uma transição*/
+    .header-principal ul {
+        position: fixed;
+        top: 102px;
+        margin-top: 0;
+        right: -100%;
+        background: rgba(0, 0, 0, 0.5);
+        flex-direction: column;
+        align-items: center;
+        transition: right 0.5s linear;
+        width: 50%;
+        height: calc(100vh - 100px);
+    }
+
+    /*Colocamos o elemnto como se fosse um bloco junto com uma largura definida e um texto alinhado no centro*/
+    header .menu {
+        display: block;
+        width: 100px;
+        text-align: center;
+    }
+
+    /*Colocamos o elemento para ficar 0% para a direita*/
+    #chk1:checked~ul {
+        right: 0;
+    }
+}
+
+/*-----------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+/*Media scren*/
+
+/*Media scren (820 pixels)*/
+@media only screen and (max-width: 820px) {
+
+    /*Alteramos o grid do site principal*/
+    .principal {
+        grid-template-areas:
+            "cabe cabe cabe"
+            "lad lad lad"
+            "fund fund fund";
+        grid-template-columns: 3fr;
+        grid-template-rows: 150px auto auto;
+    }
+
+    /*Deixei centralizado o titulo da pagina*/
+    .primeiro-titulo {
+        margin-left: auto;
+        margin-right: auto;
+        font-size: clamp(1em, 1em + 1vw, 1.5em);
+    }
+
+    /*Tiramos o elemento do site*/
+    .primeiro-titulo:before,
+    .primeiro-titulo:after {
+        display: none;
+    }
+
+
+    /*-----------------------------------------------------------------------------------------------------------------------------------------------*/
+
+    /*Media scren (Landing-page) (820 pixels)*/
+
+
+    /*Colocomos o elemento como se fosse um bloco*/
+    nav .menu-list .close-icon,
+    header .menu-icon {
+        display: block;
+    }
+
+    /*Colocamos uma altura e largura definida com uma cor de fundo uma transição de 5 segundo junto com uma posição fixa */
+    nav .menu-list {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transform: translateX(100%);
+        transition: transform 0.2s;
+        background-color: rgb(88, 88, 88);
+    }
+
+    /*Colocamos um tamanho de letra definido*/
+    nav .menu-list li {
+        font-size: 30px;
+    }
+
+    /*Colocamos uma quebra de linha*/
+    .main-landing-page {
+        flex-wrap: wrap;
+    }
+
+    /*Colocamos uma distancia da borda e uma largura definida*/
+    .main-landing-page .esquerda {
+        width: 100%;
+        text-align: center;
+        padding: 50px;
+    }
+
+    /*Colocamos um tamanho de letra definida*/
+    .main-landing-page .esquerda h1 {
+        font-size: 3rem;
+    }
+
+    /*Colocamos uma distancia do elemento emrelação a outros elementos e uma largura definida*/
+    .main-landing-page .direita {
+        width: 100%;
+        margin: 50px 10px;
+    }
+
+    /*-----------------------------------------------------------------------------------------------------------------------------------------------*/
+
+    /*Media scren (Formulario) (820 pixels)*/
+
+    /*Colocamos para que o elemento não apareça no site*/
+    .overlay-container {
+        display: none;
+    }
+
+    /*Colocamos o elemnto come se fosse um bloco*/
+    .mobile-text {
+        display: block;
+    }
+
+    /*Colocamos uma cor nas palavras e um estilo nelas*/
+    .mobile-text a {
+        font-weight: 900;
+        color: inherit;
+    }
+
+    /*Colocamos uma altura e largura no elemento*/
+    .login-container {
+        width: 75vw;
+        height: 75vh;
+    }
+
+    /*Colocamos uma largura e um espaçamento no elemento*/
+    .form {
+        width: 100%;
+        justify-content: space-evenly;
+    }
+
+    /*Colocamos uma cor de fundo e uma cor nas palavras junto com uma transformação do elemento de 100% no eixo horizontal*/
+    .form-registro {
+        position: absolute;
+        background-color: rgb(209, 209, 209);
+        color: rgb(0, 0, 0);
+        transform: translateX(100%);
+    }
+
+    /*Colocamos uma transformação no elemento de 05 para o eixo horizontal */
+    .login-container.move .form-registro {
+        transform: translateX(0%);
+    }
+
+    /*Colocamos uma cor de fundo junto com uma cor nas palavras e também uma borda*/
+    .form-button {
+        background-color: rgb(161, 161, 161);
+        color: white;
+        border: 2px solid rgb(0, 0, 0);
+    }
+
+    /*Colocamos uma largura definida no elemento*/
+    .exercicios-div {
+        width: 80%;
+    }
+
+    /*Colocamos os textos alinhados na esquerda junto com um tamanho de letra especifico */
+    .info_questao {
+        font-size: 2vw;
+        text-align: left;
+        padding-left: 25%;
+    }
+
+    /*Colocamos um tamanho de letra especifico junto com uma distancia em cima e em baixo*/
+    .button-exercicio {
+        font-size: 20px;
+        padding: 10px 40px;
+    }
+
+    /*-----------------------------------------------------------------------------------------------------------------------------------------------*/
+    /*Media scren (Cadastro) (820 pixels)*/
+
+    /*Colocamos o grid no cadastro */
+    .cadastro {
+        display: grid;
+        grid-template-areas:
+            "cabe cabe cabe"
+            "prin prin prin"
+            "fund fund fund";
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto 71% 270px;
+        grid-gap: 2rem;
+    }
+
+}
+
+/*-----------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*-----------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*Media scren*/
+
+/*Media scren (480 pixels)*/
+@media only screen and (max-width: 480px) {
+
+    /*Alteramos o grid do site principal*/
+    .principal {
+        grid-template-areas:
+            "cabe cabe cabe"
+            "lad lad lad"
+            "fund fund fund";
+        grid-template-columns: 3fr;
+        grid-template-rows: 150px auto auto;
+    }
+
+    /*Colocamos uma altura e largura para o elemnto e tiramos a sombra*/
+    .login-container {
+        width: 100vw;
+        height: 100vh;
+        box-shadow: none;
+    }
+
+    /*Colocamos a largura do elementoi automatica*/
+    .exercicios-div {
+        width: auto;
+    }
+
+    /*Colocamos os textos alinhados na esquerda junto com um tamanho de letra especifico */
+    .info_questao {
+        font-size: 12px;
+        text-align: left;
+        padding-left: 25%;
+    }
+
+    /*Colocamos um tamanho de letra especifico junto com uma distancia em cima e em baixo*/
+    .button-exercicio {
+        font-size: 20px;
+        padding: 10px 40px;
+    }
+
+    /*Responsividade calculadora*/
+    .primeiro-titulo {
+        font-size: 18px;
+    }
+
+    /*Responsividade calculadora*/
+    .calculadora {
+        top: -20%;
+        width: 30%;
+        height: auto;
+        border: 2px solid black;
+    }
+
+    /*Responsividade calculadora*/
+    .calculadora .input[type="number"] {
+        width: 100%;
+    }
+
+    /*Responsividade calculadora*/
+    button {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    /*Colocamos o grid no questionario */
+    .pai-calculo {
+        display: grid;
+        grid-template-areas:
+            "cabe cabe cabe"
+            "corp corp corp"
+            "fund fund fund";
+        grid-template-columns: auto auto auto;
+        grid-template-rows: 150px 72% auto;
+        grid-gap: 2rem;
+    }
+
+    /*Modificações calculadora 480px*/
+    .calculadora input {
+        width: 50%;
+    }
+
+    /*Modificações calculadora 480px*/
+    .calculadora {
+        width: 100px;
+        height: 100px;
+    }
+
+    /*Modificações calculadora 480px*/
+    .titulo-calculo {
+        font-size: 15px;
+    }
+
+    /*Modificações calculadora 480px*/
+    .resposta-calculo-1 {
+        font-size: 15px;
+    }
+
+    /*Modificações calculadora 480px*/
+    .pixels {
+        font-size: 7px;
+    }
+
+    /*Modificações calculadora 480px*/
+    .resposta-calculo {
+        font-size: 50%;
+    }
+
+    /*-----------------------------------------------------------------------------------------------------------------------------------------------*/
+    /*Media scren (Cadastro) (480 pixels)*/
+
+    /*Colocamos o grid no cadastro */
+    .cadastro {
+        display: grid;
+        grid-template-areas:
+            "cabe cabe cabe"
+            "prin prin prin"
+            "fund fund fund";
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto 71% 270px;
+        grid-gap: 2rem;
+    }
+
+}
+
+/*-----------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*Aqui começa a parte da (Calculadora)*/
+
+/*Colocamos o grid no main da calculadora*/
+.calculadora_main {
+    grid-area: corp;
+    width: 100%;
+    height: 35rem;
+}
+
+/*Colocamos uma largura no elemento junto com uma cor de fundo uma distancia da borda também deixamos as bordaa arrendondadas*/
+.calculadora {
+    margin: 100px auto;
+    width: 30%;
+    height: auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*Colocamos uma largura definida junto com uma borda e distancia da borda*/
+.calculadora input {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+/*Colocamos uma altura definida junto com uma cor de fundo também alteramos a cor das palavras junto com um cursor qua aparece como se fosse um link deixamos também uma distancia da borda */
+.calculadora button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+/*Colocamos uma cor de fundo*/
+.calculadora button:hover {
+    background-color: #555;
+}
+
+/*Colocamos uma distancia entre os elementos*/
+.calculadora #resultado {
+    margin-top: 10px;
+}

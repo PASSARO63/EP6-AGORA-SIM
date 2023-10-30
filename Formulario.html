@@ -1,0 +1,260 @@
+<!--Identifica o HTML5-->
+<!DOCTYPE html>
+
+<!--colocamos nossa pagina em portugues Brasil-->
+<html lang="pt-br">
+
+<!--Head é a aba do browser-->
+
+<head>
+    <!--Nos permite usar caracteres especiais-->
+    <meta charset="UTF-8">
+    <!--Utiizada para configurar a pagina web, para que sempre esteja na sua versao mais recente-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--é usado para que o site web se enquadre proporcionalmente nas telas de celulares-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Identifica o CSS para que possamos usá-lo no nosso HTML-->
+    <link rel="stylesheet" href="style.css">
+    <!--identifica as imagens em codigo-->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <!--Identifica os icons atráves de codigo-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--Imagem do brasão pequenininho na aba-->
+    <link rel="shortcut icon" href="imagens/logo.png">
+    <!--Nome da aba do browser-->
+    <title>CADASTRO</title>
+</head>
+
+<body class="cadastro">
+
+    <!--Aqui começa o header-->
+    <header class="header-principal">
+        <!--Aqui tem um input para colocar o menu-->
+        <input type="checkbox" name="" id="chk1">
+        <!--Aqui e a logo do site-->
+        <div class="logo">
+            <h1>FORMULARTE</h1>
+        </div>
+        <!--Aqui começa a lista do header-->
+        <ul>
+            <!--Aqui são os links das outras paginas-->
+            <li><a href="landing-page.html">landing page</a></li>
+            <!--Aqui são os links das outras paginas-->
+            <li><a href="exercicios.html">Exercicios</a></li>
+            <!--Aqui são os links das outras paginas-->
+            <li><a href="Questionario.html">Questionário</a></li>
+            <!--Aqui são os links das outras paginas-->
+            <li><a href="Calculadora.html" target="_blank">Calculadora</a></li>
+            <!--Aqui são os links das redes sociais-->
+            <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+            <!--Aqui são os links das redes sociais-->
+            <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+            <!--Aqui são os links das redes sociais-->
+            <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+        </ul>
+        <!--Aqui termina a lista do header-->
+
+        <!--Aqui vai ter o icone do menu-->
+        <div class="menu">
+            <!--Aqui está o icone do menu-->
+            <label for="chk1">
+                <!--Esse e o icone do menuzinho-->
+                <i class="fa fa-bars"></i>
+            </label>
+        </div>
+    </header>
+    <!--Fim do Header-->
+
+    <!--Aqui começa o Main-->
+    <main id="main-cadastro" class="main-cadastro">
+        <!--Aqui vai ter todas as informações do site-->
+        <div class="login-container move" id="login-container">
+            <!--Aqui vai conter os dois formularios-->
+            <div class="form-container">
+                <!--Aqui tem as informações do formulario-->
+                <form class="form form-login">
+                    <!--Titulo do formulario-->
+                    <h2 class="form-titulo">Entrar com</h2>
+                    <!--Aqui vai conter os icones do formulario-->
+                    <div class="form-icones">
+                        <!--Aqui e o icone do formulario-->
+                        <a href="#" class="icone-social">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+
+                        <!--Aqui e o icone do formulario-->
+                        <a href="#" class="icone-social">
+                            <i class="fa-brands fa-google"></i>
+                        </a>
+
+                        <!--Aqui e o icone do formulario-->
+                        <a href="#" class="icone-social">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                    <!--Aqui e otexto do formulario-->
+                    <p class="form-texto">ou utilize sua conta</p>
+                    <!--Aqui vai conter os inputs-->
+                    <div class="form-input-container">
+                        <!--Aqui e o input do formlario-->
+                        <input type="email" class="form-input" placeholder="E-mail">
+
+                        <!--Aqui e o input do formlario-->
+                        <input type="password" class="form-input" placeholder="Senha">
+                    </div>
+                    <!--Aqui e o link para ver se esquceu a senha-->
+                    <a href="#" class="form-link">Esqueceu a senha?</a>
+                    <!--Botão para logar em sua conta-->
+                    <button class="form-button">Logar</button>
+
+                    <!--Aqui contem as inforemações para quando diminuir a tela ele aparecer-->
+                    <p class="mobile-text">
+                        Não tem conta?
+                        <!--Link para fazer a transçaõ quando a tela estiver menor -->
+                        <a href="#" id="open-login-mobile">Login</a>
+                    </p>
+
+                </form>
+
+
+                <!--Aqui tem as informações do formulario-->
+                <form class="form form-registro">
+                    <!--Titulo do formulario-->
+                    <h2 class="form-titulo">Criar Conta</h2>
+                    <!--Aqui vai conter os icones do formulario-->
+                    <div class="form-icones">
+                        <!--Aqui e o icone do formulario-->
+                        <a href="#" class="icone-social">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+
+                        <!--Aqui e o icone do formulario-->
+                        <a href="#" class="icone-social">
+                            <i class="fa-brands fa-google"></i>
+                        </a>
+
+                        <!--Aqui e o icone do formulario-->
+                        <a href="#" class="icone-social">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                    </div>
+
+                    <!--Aqui e otexto do formulario-->
+                    <p class="form-texto">ou cadastre seu E-mail</p>
+
+                    <!--Aqui vai conter os inputs-->
+                    <div class="form-input-container">
+
+                        <!--Aqui e o input do formlario-->
+                        <input type="text" class="form-input" placeholder="Nome">
+
+                        <!--Aqui e o input do formlario-->
+                        <input type="email" class="form-input" placeholder="E-mail">
+
+                        <!--Aqui e o input do formlario-->
+                        <input type="password" class="form-input" placeholder="Senha">
+                    </div>
+
+                    <!--Botão de cadastro-->
+                    <button class="form-button ">Cadastrar</button>
+
+
+                    <!--Aqui contem as inforemações para quando diminuir a tela ele aparecer-->
+                    <p class="mobile-text">
+                        Não tem conta?
+                        <!--Link para fazer a transçaõ quando a tela estiver menor -->
+                        <a href="#" id="open-register-mobile">Registre-se</a>
+                    </p>
+
+                </form>
+
+                <!--Aqui vai conter todas as informações da transição-->
+                <div class="overlay-container">
+                    <!--Aqui contem os elementos da transição-->
+                    <div class="overlay">
+                        <!--Titulo-->
+                        <h2 class="form-title form-titulo-branco">Já tem conta?</h2>
+                        <!--Um paragrafo para entrar em sua conta-->
+                        <p class="form-texto form-texto-branco">Para entrar na nossa plataforma faça login com suas
+                            informações</p>
+                        <!--Um botão para entra em sua conta-->
+                        <button class="form-button form-button-light" id="open-login">Entrar</button>
+                    </div>
+
+                    <!--Aqui contem os elementos da transição-->
+                    <div class="overlay">
+                        <!--Titulo-->
+                        <h2 class="form-title form-titulo-branco">Olá Aluno!</h2>
+                        <!--Um paragrafo para se cadastrar-->
+                        <p class="form-text form-texto-branco">Cadastre-se e comece a usar a nossa plataforma on-line
+                        </p>
+                        <!--Um botão para se cadastrar-->
+                        <button class="form-button form-button-light" id="open-register">Cadastrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!--Aqui e o fim do Main-->
+
+    <!--Aqui começa o Footer-->
+    <footer>
+        <!--Aqui vai conter os icones das redes sociais-->
+        <div class="redes-sociais">
+            <!--Icone das redes sociais-->
+            <i class="fa-brands fa-instagram"></i>
+            <!--Icone das redes sociais-->
+            <i class="fa-brands fa-github"></i>
+            <!--Icone das redes sociais-->
+            <i class="fa-brands fa-whatsapp"></i>
+            <!--Icone das redes sociais-->
+            <i class="fa-brands fa-twitter"></i>
+        </div>
+
+        <!--Aqui vai conter os links para outras paginas-->
+        <ul class="link">
+            <!--Link para outras paginas-->
+            <li><a href="#">Email</a></li>
+            <!--Link para outras paginas-->
+            <li><a href="#">Sobre</a></li>
+            <!--Link para outras paginas-->
+            <li><a href="#">Contatos</a></li>
+            <!--Link para outras paginas-->
+            <li><a href="#">Serviços</a></li>
+            <!--Link para outras paginas-->
+            <li><a href="#">História</a></li>
+        </ul>
+        <!--Aqui vai ter a linha que criamos no css-->
+        <div class="line"></div>
+        <!--Aqui e um paragrafo de direitos autorais-->
+        <p class="creditos">&#169
+            2023 Todos os direitos reservados</p>
+    </footer>
+    <!--Aqui é o fim do Footer-->
+
+    <!--Identifica o JavaScript para que possamos usá-lo no nosso HTML-->
+    <script>
+        /*----------------------------------------------------------------------------------------------------------------------------------------*/
+        /*Aqui começa o JavaScript do Cadastro*/
+
+        /*Adicionamos uma variavel com o nome de loginContainer*/
+        var loginContainer = document.getElementById('login-container');
+
+        /*Adicionamos outra variavel com o nome de moveOverlay*/
+        var moveOverlay = () => loginContainer.classList.toggle('move');
+
+        /*Falamos para quando clicar na tag open-register ele mudar o overlay*/
+        document.getElementById('open-register').addEventListener('click', moveOverlay);
+        /*Falamos para quando clicar na tag open-login ele mudar o overlay*/
+        document.getElementById('open-login').addEventListener('click', moveOverlay);
+
+        /*Falamos para quando clicar na tag open-register-mobile ele mudar o overlay*/
+        document.getElementById('open-register-mobile').addEventListener('click', moveOverlay);
+        /*Falamos para quando clicar na tag open-login-mobile ele mudar o overlay*/
+        document.getElementById('open-login-mobile').addEventListener('click', moveOverlay);
+    </script>
+</body>
+
+</html>

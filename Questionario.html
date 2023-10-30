@@ -1,0 +1,335 @@
+<!--Identifica o HTML5-->
+<!DOCTYPE html>
+
+<!--colocamos nossa pagina em portugues Brasil-->
+<html lang="pt-br">
+
+<!--Head é a aba do browser-->
+
+<head>
+    <!--Nos permite usar caracteres especiais-->
+    <meta charset="UTF-8">
+    <!--Utiizada para configurar a pagina web, para que sempre esteja na sua versao mais recente-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--é usado para que o site web se enquadre proporcionalmente nas telas de celulares-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Identifica o CSS para que possamos usá-lo no nosso HTML-->
+    <link rel="stylesheet" href="style.css">
+    <!--identifica as imagens em codigo-->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <!--Identifica os icons atráves de codigo-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--Imagem do brasão pequenininho na aba-->
+    <link rel="shortcut icon" href="imagens/logo.png">
+    <!--Nome da aba do browser-->
+    <title>Questionário</title>
+</head>
+
+<body class="questionário">
+
+    <!--Aqui começa o header-->
+    <header class="header-principal">
+        <!--Aqui tem um input para colocar o menu-->
+        <input type="checkbox" name="" id="chk1">
+        <!--Aqui e a logo do site-->
+        <div class="logo">
+            <h1>FORMULARTE</h1>
+        </div>
+        <!--Aqui começa a lista do header-->
+        <ul>
+            <!--Aqui são os links das outras paginas-->
+            <li><a href="landing-page.html">landing page</a></li>
+            <!--Aqui são os links das outras paginas-->
+            <li><a href="pagina-principal.html">Conteúdo</a></li>
+            <!--Aqui são os links das outras paginas-->
+            <li><a href="exercicios.html" target="_blank">Exercícios</a></li>
+            <!--Aqui são os links das outras paginas-->
+            <li><a href="Calculadora.html" target="_blank">Calculadora</a></li>
+            <!--Aqui são os links das redes sociais-->
+            <li><a href="Formulario.html" target="_blank"><i class="fa-solid fa-circle-user"></i></a></li>
+            <!--Aqui são os links das redes sociais-->
+            <li><a href="Códigos.html" target="_blank"><i class="fa-brands fa-html5"></i></a></li>
+            <!--Aqui são os links das redes sociais-->
+            <li><a href="creditos.html" target="_blank"><i class="fa-solid fa-users-line"></i></a></li>
+        </ul>
+        <!--Aqui termina a lista do header-->
+
+        <!--Aqui vai ter o icone do menu-->
+        <div class="menu">
+            <!--Aqui está o icone do menu-->
+            <label for="chk1">
+                <!--Esse e o icone do menuzinho-->
+                <i class="fa fa-bars"></i>
+            </label>
+        </div>
+    </header>
+    <!--Fim do Header-->
+
+    <!--Aqui vai ficar todas as informações do questionario-->
+    <main class="main-exercicios">
+
+        <!--Titulo-->
+        <h1>Questionário</h1>
+
+        <!--Aqui vai conter todas as informações do questionario-->
+        <div class="exercicios-div">
+            <!--Aqui e o titulo da pergunta junto com um BR para pular linha-->
+            <p>1. Qual é a solução da equação x² - 4x + 3 = 0</p> <br> <br>
+
+            <!--Aqui e o input aonde coloca os numeros para responder as questões-->
+            <p>X1 = <input class="Questio-01" type="text" id="resposta1" style="width: 100px;"></p>
+
+            <!--Aqui e o input aonde coloca os numeros para responder as questões-->
+            <p>X2 = <input class="Questio-01" type="text" id="resposta01" style="width: 100px;"></p>
+
+            <!--Aqui vai aparecer se a resposta esta correta-->
+            <p class="verde1" id="resultado1"></p>
+
+            <!--Aqui vai aparecer se a resposta esta errada-->
+            <p class="vermelho1" id="incorreto1"></p> <br>
+
+            <!--Aqui vai aparecer o grafico da resposta-->
+            <p class="grafico" id="imagem-1"></p> <br>
+
+            <!--Adicionei um botão-->
+            <button><a href="Calculadora.html" target="_blank">Calculadora</a></button> <br> <br>
+
+            <!--Aqui e o titulo da pergunta junto com um BR para pular linha-->
+            <p>2. Encontre as raízes da equação 2x² + 5x - 3 = 0.</p> <br> <br>
+
+            <!--Aqui e o input aonde coloca os numeros para responder as questões-->
+            <p>X1 = <input class="Questio-01" type="text" id="resposta2" style="width: 100px;"></p>
+
+            <!--Aqui e o input aonde coloca os numeros para responder as questões-->
+            <p>X2 = <input class="Questio-01" type="text" id="resposta02" style="width: 100px;"> <br> </p>
+
+            <!--Aqui vai aparecer se a resposta esta correta-->
+            <p class="verde1" id="resultado2"></p>
+
+            <!--Aqui vai aparecer se a resposta esta errada-->
+            <p class="vermelho1" id="incorreto2"></p> <br>
+
+            <!--Aqui vai aparecer o grafico da resposta-->
+            <p class="grafico" id="imagem-2"></p> <br>
+
+            <!--Aqui e o titulo da pergunta junto com um BR para pular linha-->
+            <p>3. Determine as soluções da equação x^2 - 9 = 0</p> <br> <br>
+
+            <!--Aqui e o input aonde coloca os numeros para responder as questões-->
+            <p>X1 = <input class="Questio-01" type="text" id="resposta3" style="width: 100px;"></p>
+
+            <!--Aqui e o input aonde coloca os numeros para responder as questões-->
+            <p>X2 = <input class="Questio-01" type="text" id="resposta03" style="width: 100px;"> <br> </p>
+
+            <!--Aqui vai aparecer se a resposta esta correta-->
+            <p class="verde1" id="resultado3"></p>
+
+            <!--Aqui vai aparecer se a resposta esta errada-->
+            <p class="vermelho1" id="incorreto3"></p> <br>
+
+            <!--Aqui vai aparecer o grafico da resposta-->
+            <p class="grafico" id="imagem-3"></p> <br>
+
+            <!--Aqui e o titulo da pergunta junto com um BR para pular linha-->
+            <p>4. Calcule as raízes da equação x² + 2x + 1 = 0.</p> <br> <br>
+
+            <!--Aqui e o input aonde coloca os numeros para responder as questões-->
+            <p>X1 = <input class="Questio-01" type="text" id="resposta4" style="width: 100px;"></p>
+
+            <!--Aqui e o input aonde coloca os numeros para responder as questões-->
+            <p>X2 = <input class="Questio-01" type="text" id="resposta04" style="width: 100px;"> <br> </p>
+
+            <!--Aqui vai aparecer se a resposta esta correta-->
+            <p class="verde1" id="resultado4"></p>
+
+            <!--Aqui vai aparecer se a resposta esta errada-->
+            <p class="vermelho1" id="incorreto4"></p> <br>
+
+            <!--Aqui vai aparecer o grafico da resposta-->
+            <p class="grafico" id="imagem-4"></p> <br>
+
+            <!--Aqui e o titulo da pergunta junto com um BR para pular linha-->
+            <p>5. Encontre as soluções da equação 4x² - 8x + 4 = 0.</p> <br> <br>
+
+            <!--Aqui e o input aonde coloca os numeros para responder as questões-->
+            <p>X1 = <input class="Questio-01" type="text" id="resposta5" style="width: 100px;"></p>
+
+            <!--Aqui e o input aonde coloca os numeros para responder as questões-->
+            <p>X2 = <input class="Questio-01" type="text" id="resposta05" style="width: 100px;"> <br> </p>
+
+            <!--Aqui vai aparecer se a resposta esta correta-->
+            <p class="verde1" id="resultado5"></p>
+
+            <!--Aqui vai aparecer se a resposta esta errada-->
+            <p class="vermelho1" id="incorreto5"></p> <br>
+
+            <!--Aqui vai aparecer o grafico da resposta-->
+            <p class="grafico" id="imagem-5"></p> <br>
+
+            <!--Aqui e o titulo da pergunta junto com um BR para pular linha-->
+            <p>6. Determine as raízes da equação x² + 7x + 10 = 0.</p> <br> <br>
+
+            <!--Aqui e o input aonde coloca os numeros para responder as questões-->
+            <p>X1 = <input class="Questio-01" type="text" id="resposta6" style="width: 100px;"> </p>
+
+            <!--Aqui e o input aonde coloca os numeros para responder as questões-->
+            <p>X2 = <input class="Questio-01" type="text" id="resposta06" style="width: 100px;"> <br> </p>
+
+            <!--Aqui vai aparecer se a resposta esta correta-->
+            <p class="verde1" id="resultado6"></p>
+
+            <!--Aqui vai aparecer se a resposta esta errada-->
+            <p class="vermelho1" id="incorreto6"></p> <br>
+
+            <!--Aqui vai aparecer o grafico da resposta-->
+            <p class="grafico" id="imagem-6"></p> <br>
+
+            <!--Aqui e o titulo da pergunta junto com um BR para pular linha-->
+            <p>7. Calcule as soluções da equação x^2 + x - 20 = 0</p> <br> <br>
+
+            <!--Aqui e o input aonde coloca os numeros para responder as questões-->
+            <p>X1 = <input class="Questio-01" type="text" id="resposta7" style="width: 100px;"></p>
+
+            <!--Aqui e o input aonde coloca os numeros para responder as questões-->
+            <p>X2 = <input class="Questio-01" type="text" id="resposta07" style="width: 100px;"> <br> </p>
+
+            <!--Aqui vai aparecer se a resposta esta correta-->
+            <p class="verde1" id="resultado7"></p>
+
+            <!--Aqui vai aparecer se a resposta esta errada-->
+            <p class="vermelho1" id="incorreto7"></p> <br>
+
+            <!--Aqui vai aparecer o grafico da resposta-->
+            <p class="grafico" id="imagem-7"></p> <br>
+
+            <!--Aqui e o titulo da pergunta junto com um BR para pular linha-->
+            <p>8. Encontre as raízes da equação x² - 6x + 9 = 0.</p> <br> <br>
+
+            <!--Aqui e o input aonde coloca os numeros para responder as questões-->
+            <p>X1 = <input class="Questio-01" type="text" id="resposta8" style="width: 100px;"> </p>
+
+            <!--Aqui e o input aonde coloca os numeros para responder as questões-->
+            <p>X2 = <input class="Questio-01" type="text" id="resposta08" style="width: 100px;"> <br> </p>
+
+            <!--Aqui vai aparecer se a resposta esta correta-->
+            <p class="verde1" id="resultado8"></p>
+
+            <!--Aqui vai aparecer se a resposta esta errada-->
+            <p class="vermelho1" id="incorreto8"></p> <br>
+
+            <!--Aqui vai aparecer o grafico da resposta-->
+            <p class="grafico" id="imagem-8"></p> <br>
+
+            <!--Aqui e o titulo da pergunta junto com um BR para pular linha-->
+            <p>9. Determine as soluções da equação 5x² + x - 2 = 0.</p> <br> <br>
+
+            <!--Aqui e o input aonde coloca os numeros para responder as questões-->
+            <p>X1 = <input class="Questio-01" type="text" id="resposta9" style="width: 100px;"></p>
+
+            <!--Aqui e o input aonde coloca os numeros para responder as questões-->
+            <p>X2 = <input class="Questio-01" type="text" id="resposta09" style="width: 100px;"> <br> </p>
+
+            <!--Aqui vai aparecer se a resposta esta correta-->
+            <p class="verde1" id="resultado9"></p>
+
+            <!--Aqui vai aparecer se a resposta esta errada-->
+            <p class="vermelho1" id="incorreto9"></p> <br>
+
+            <!--Aqui vai aparecer o grafico da resposta-->
+            <p class="grafico" id="imagem-9"></p> <br>
+
+            <!--Aqui e o titulo da pergunta junto com um BR para pular linha-->
+            <p>10. Calcule as raízes da equação 2x² + 4x + 2 = 0.</p> <br> <br>
+
+            <!--Aqui e o input aonde coloca os numeros para responder as questões-->
+            <p>X1 = <input class="Questio-01" type="text" id="resposta10" style="width: 100px;"></p>
+
+            <!--Aqui e o input aonde coloca os numeros para responder as questões-->
+            <p>X2 = <input class="Questio-01" type="text" id="resposta010" style="width: 100px;"> <br> </p>
+
+            <!--Aqui vai aparecer se a resposta esta correta-->
+            <p class="verde1" id="resultado10"></p>
+
+            <!--Aqui vai aparecer se a resposta esta errada-->
+            <p class="vermelho1" id="incorreto10"></p> <br>
+
+            <!--Aqui vai aparecer o grafico da resposta-->
+            <p class="grafico" id="imagem-10"></p> <br> <br>
+
+            <!--Aqui vai conter o botão de enviar as respostas-->
+            <div class="butao-quest">
+                <!--Aqui vai contem o botão para enviar as respostas do usuario-->
+                <a href="#" onclick="verificarRespostas()" class="button-exercicio">Enviar</a> <br> <br> <br>
+            </div>
+
+            <!--Aqui vai conter quantos acertos o usuario conquistou-->
+            <p class="acertos" id="quantos_acertos"></p> <br> <br>
+
+        </div>
+
+    </main>
+
+
+    <!--Aqui começa o Footer-->
+    <footer>
+        <!--Aqui vai conter os icones das redes sociais-->
+        <div class="redes-sociais">
+            <!--Icone das redes sociais-->
+            <i class="fa-brands fa-instagram"></i>
+            <!--Icone das redes sociais-->
+            <i class="fa-brands fa-github"></i>
+            <!--Icone das redes sociais-->
+            <i class="fa-brands fa-whatsapp"></i>
+            <!--Icone das redes sociais-->
+            <i class="fa-brands fa-twitter"></i>
+        </div>
+
+        <!--Aqui vai conter os links para outras paginas-->
+        <ul class="link">
+            <!--Link para outras paginas-->
+            <li><a href="#">Email</a></li>
+            <!--Link para outras paginas-->
+            <li><a href="#">Sobre</a></li>
+            <!--Link para outras paginas-->
+            <li><a href="#">Contatos</a></li>
+            <!--Link para outras paginas-->
+            <li><a href="#">Serviços</a></li>
+            <!--Link para outras paginas-->
+            <li><a href="#">História</a></li>
+        </ul>
+        <!--Aqui vai ter a linha que criamos no css-->
+        <div class="line"></div>
+        <!--Aqui e um paragrafo de direitos autorais-->
+        <p class="creditos">&#169
+            2023 Todos os direitos reservados</p>
+    </footer>
+    <!--Aqui é o fim do Footer-->
+
+    <!--Aqui tem o arquivo Javascript-->
+    <script src="script.js"></script>
+
+    <!--Aqui tem um style-->
+    <style>
+        /*Modificações botão*/
+        button {
+            width: 50%;
+            padding: 10px;
+            margin-bottom: 10px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        /*Modificações link*/
+        a {
+            text-decoration: none;
+            color: #fff;
+        }
+    </style>
+</body>
+
+</html>

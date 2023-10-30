@@ -1,0 +1,491 @@
+<!--Identifica o HTML5-->
+<!DOCTYPE html>
+
+<!--colocamos nossa pagina em portugues Brasil-->
+<html lang="pt-br">
+
+<!--Head é a aba do browser-->
+
+<head>
+    <!--Nos permite usar caracteres especiais-->
+    <meta charset="UTF-8">
+    <!--Utiizada para configurar a pagina web, para que sempre esteja na sua versao mais recente-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--é usado para que o site web se enquadre proporcionalmente nas telas de celulares-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Identifica o CSS para que possamos usá-lo no nosso HTML-->
+    <link rel="stylesheet" href="style.css">
+    <!--identifica as imagens em codigo-->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <!--Identifica os icons atráves de codigo-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--Imagem do brasão pequenininho na aba-->
+    <link rel="shortcut icon" href="imagens/logo.png">
+    <!--Nome da aba do browser-->
+    <title>EQUAÇÃO 2* GRAU</title>
+</head>
+<!--Aqui começa o body colocamos um onload para quando vcarregar a pagina aparecer-->
+
+<body onload="inclui_nome()" class="principal">
+
+    <!--Aqui começa o header-->
+    <header style="position: fixed; width: 100%;" class="header-principal">
+        <!--Aqui tem um input para colocar o menu-->
+        <input type="checkbox" name="" id="chk1">
+        <!--Aqui e a logo do site-->
+        <div class="logo">
+            <h1>FORMULARTE</h1>
+        </div>
+        <!--Aqui começa a lista do header-->
+        <ul>
+            <!--Aqui são os links das outras paginas-->
+            <li><a href="landing-page.html">landing page</a></li>
+            <!--Aqui são os links das outras paginas-->
+            <li><a href="exercicios.html" target="_blank">Exercicios</a></li>
+            <!--Aqui são os links das outras paginas-->
+            <li><a href="Questionario.html" target="_blank">Questionário</a></li>
+            <!--Aqui são os links das outras paginas-->
+            <li><a href="Calculadora.html" target="_blank">Calculadora</a></li>
+            <!--Aqui são os links das redes sociais-->
+            <li><a href="Formulario.html" target="_blank"><i class="fa-solid fa-circle-user"></i></a></li>
+            <!--Aqui são os links das redes sociais-->
+            <li><a href="Códigos.html" target="_blank"><i class="fa-brands fa-html5"></i></a></li>
+            <!--Aqui são os links das redes sociais-->
+            <li><a href="creditos.html" target="_blank"><i class="fa-solid fa-users-line"></i></a></li>
+        </ul>
+        <!--Aqui termina a lista do header-->
+
+        <!--Aqui vai ter o icone do menu-->
+        <div class="menu">
+            <!--Aqui está o icone do menu-->
+            <label for="chk1">
+                <!--Esse e o icone do menuzinho-->
+                <i class="fa fa-bars"></i>
+            </label>
+        </div>
+    </header>
+    <!--Fim do Header-->
+
+    <aside class="aside-principal">
+
+    <!--Aqui vai conter todas as informações do site-->
+    <div style="text-align: center;" class="informacoes-gerais"> <br>
+
+        <!--Aqui e o nome do usuario junto com um BR que faz com que pule linha-->
+        <h1 id="marcacao_nome"></h1> <br> <br> <br>
+
+        <!--Aqui contem o titulo do conteudo-->
+        <h3 class="primeiro-titulo">Conheça um pouco mais sobre Equações do 2º Grau</h3> <br> <br>
+
+        <div class="paragrafo-1">
+            <!--Aqui e um paragrafo junto com um BR que faz com que pule linhas-->
+            <p>A equação do 2º grau é caracterizada por possuir uma incógnita de grau 2. Para
+                resolver esse tipo de equação, é importante conhecer a fórmula de Bhaskara.</p> <br>
+
+            <!--Aqui vai conter a imagem do quadro-->
+            <div class="imagem-equaçao">
+                <!--Imagem de exemplo-->
+                <img src="imagens/q1.png" class="imagem-equaçao" style="width: 55%;"></a>
+            </div><br>    
+
+            <!--Aqui e um paragrafo junto com um BR que faz com que pule linhas-->  
+            <p id="Tipos" class="">A equação do 2º grau é caracterizada por um <span
+                style="color: red;">polinômio</span> degrau 2, ouseja, um polinômio do tipo ax2+bx+c, em que a, b e
+                c são <span style="color: red;">números reais</span>.
+                Ao resolvermos uma equação de grau 2, estamos interessados em encontrar valores para a incógnita x que
+                torne o valor da expressão igual a 0, que são chamadas de raízes, isto é, ax2 + bx +c = 0.</p> <br>
+
+            <!--Aqui contem o titulo do conteudo-->
+            <h2>Tipos de Equação do 2 Grau</h2>
+
+            <!--Aqui e um paragrafo junto com um BR que faz com que pule linhas-->
+            <p>A equação de 2º grau pode ser <strong>representada por ax²+bx+c=0</strong>, em que
+                oscoeficientes a, b e
+                c são números reais, com a ≠ 0.</p> <br>
+
+            <!--Aqui vai conter os exemplos de equação do 2º Grau-->    
+            <div class="exemplos">
+
+                <!--Aqui contem o titulo do conteudo-->
+                <h2>-->Exemplos<-- </h2> <br>
+
+                <!--Aqui vai conter a imagem dos exemplos-->
+                <div class="imagem-equaçao">  
+                    <!--Colocamos uma link para ele mudar a imagem quando o mouse passa por cima-->
+                    <a onmouseover="mudar('muda', 'imagens/q3.png')"
+                     onmouseout="mudar('muda', 'imagens/q2.png')">
+                     <!--Colocamos a imagem principal-->
+                     <img src="imagens/q2.png"  id="muda" class="imagem-equaçao" style="width: 55%;"></a>
+
+                 </div><br>
+            </div>
+
+            <!--Aqui e um paragrafo junto com um BR que faz com que pule linhas-->
+            <p>A equação do 2º grau é classificada como <span style="color: red;">completa</span>
+                quando todos os coeficientes são
+                diferentes de 0, ou
+                seja, a ≠ 0, b ≠ 0 e c ≠ 0.</p> <br>
+
+            <!--Aqui e um paragrafo junto com um BR que faz com que pule linhas-->
+            <p>A equação do 2º grau é classificada como <span style="color: red;">incompleta</span>
+                quando o valor dos coeficientes b
+                ou c são iguais a
+                0, isto é, b = 0 ou c = 0.</p> <br>
+
+            <!--Aqui vai conter os exemplos de equação do 2º Grau-->     
+            <div class="exemplos">
+
+                <!--Aqui contem o titulo do conteudo-->
+                <h2>-->Exemplos<-- </h2> <br>
+                    <!--Aqui e um paragrafo junto com um BR que faz com que pule linhas-->                      
+                    <p>a) 2x2 – 4 = 0 → a = 2; b = 0 e c= – 4</p> <br>
+                    <!--Aqui e um paragrafo junto com um BR que faz com que pule linhas-->
+                    <p>b) -x2 + 3x = 0 → a = – 1; b = 3 e c = 0</p> <br>
+                    <!--Aqui e um paragrafo junto com um BR que faz com que pule linhas-->
+                    <p>c) x2 = 0 → a = 1; b =0 e c =0</p> <br>
+
+            </div>
+
+            <!--Aqui e um paragrafo junto com um BR que faz com que pule linhas-->
+            <p id="Resolver"> <span style="color: red;">Atenção:</span> o valor do coeficiente a nunca é igual a
+                0, caso isso ocorra, a equação deixargb(48, 47, 47) de ser do 2º grau.</p> <br> <br> <br> <br> <b></b>
+
+            <!--Aqui contem o titulo do conteudo-->
+            <h1 class="primeiro-titulo">Como resolver equações de 2º grau ?</h1> <br>
+
+            <!--Aqui e um paragrafo junto com um BR que faz com que pule linhas-->
+            <p>A solução de uma equação do 2º grau ocorre, quando as raízes são encontradas, ou
+                seja, os valores atribuídos a x . Esses valores de x devem tornar a igualdade verdadeira, isto é, ao
+                substituir o valor de x na expressão, o resultado deve ser igual a 0.</p> <br>
+
+            <!--Aqui contem o titulo do conteudo-->
+            <h2>-->Exemplos<-- </h2> <br>
+
+            <!--Aqui e um paragrafo junto com um BR que faz com que pule linhas-->
+            <p>Considerando a equação x2 – 1 = 0 temos que x’ = 1 e x’’ = – 1 são soluções
+                da
+                equação, pois substituindo esses valores na expressão, temos uma igualdade verdadeira. Veja:</p>
+            <br>        
+
+            <!--Aqui e um paragrafo junto com um BR que faz com que pule linhas-->
+            <p>x2 – 1 = 0</p> <br>
+
+            <!--Aqui e um paragrafo junto com um BR que faz com que pule linhas-->
+            <p>(1)2 – 1 = 0 e (–1)2 – 1 = 0</p> <br>
+
+            <!--Aqui e um paragrafo junto com um BR que faz com que pule linhas-->
+            <p>Para encontrar a solução de uma <span style="color: red;">equação</span>, é
+                preciso analisar se a equação é
+                completa e incompleta e selecionar qual método será utilizado.
+            </p> <br>
+
+            <!--Criamos uma lista para fazer um titulo -->
+            <ul class="lista-1">
+                <!--Aqui contém o titulo com um strong que faz com que a palavra fique com um tom de preto mais forte-->
+                <lu> <strong>Método de solução para equações do tipo ax²+ c = 0</strong> </lu>
+
+            </ul><br>
+
+            <!--Aqui e um paragrafo junto com um BR que faz com que pule linhas-->
+            <p> O método para determinar a solução de equações incompletas que possuem b=0
+                consiste em isolar a incógnita x, assim:
+            </p> <br>
+
+            <!--Aqui vai conter a imagem dos exemplos-->
+            <div class="imagem-equaçao"> 
+                <!--Imagem de exemplo-->
+                <img src="imagens/equacao-solucao-equacao-incompleta1.webp" alt="">
+
+            </div><br>
+
+            <!--Aqui contem o titulo do conteudo-->
+            <h2>-->Exemplo<-- </h2> <br>
+
+            <!--Aqui e um paragrafo junto com um BR que faz com que pule linhas-->
+            <p>Encontre as raízes da equação 3x2 – 27 = 0.</p> <br>
+
+            <!--Aqui vai conter a imagem dos exemplos-->
+            <div id="Solucao" class="imagem-equaçao">
+                <!--Imagem de exemplo-->
+                <img src="imagens/equacao-exemplo-solucao-incompleta1.webp" alt="">
+
+            </div><br>
+
+            <!--Criamos uma lista para fazer um titulo -->
+            <ul class="lista-1">
+                <!--Aqui contém o titulo com um strong que faz com que a palavra fique com um tom de preto mais forte-->
+                <lu> <strong>Método de solução para equações do tipo ax2 + bx = 0</strong> </lu>
+                 
+            </ul> <br>
+
+            <!--Aqui e um paragrafo junto com um BR que faz com que pule linhas-->
+            <p> O método para determinar as possíveis soluções de uma equação com c
+                =0, consiste em utilizar a <span style="color: red;">fatoração por evidência.</span>Veja:
+            </p> <br>
+
+            <!--Aqui e um paragrafo junto com um BR que faz com que pule linhas-->
+            <p>ax2 + bx = 0</p> <br>
+
+            <!--Aqui e um paragrafo junto com um BR que faz com que pule linhas-->
+            <p>x·(ax + b) = 0</p> <br>
+
+            <!--Aqui e um paragrafo junto com um BR que faz com que pule linhas-->
+            <p>Ao observar a última igualdade, é notável que há uma multiplicação e
+             que para o resultado ser 0, é necessário que, pelo menos, um dos fatores seja igual a 0.
+            </p> <br>
+
+            <!--Aqui e um paragrafo junto com um BR que faz com que pule linhas-->
+            <p>x·(ax + b) = 0</p> <br>
+
+            <!--Aqui e um paragrafo junto com um BR que faz com que pule linhas-->
+            <p>x = 0 ou ax + b = 0</p> <br>
+
+            <!--Aqui e um paragrafo junto com um BR que faz com que pule linhas-->
+            <p>Assim, a solução da equação é dada por:</p> <br>
+
+            <!--Aqui vai conter a imagem dos exemplos-->
+            <div class="imagem-equaçao">
+                <!--Imagem de exemplo-->
+                <img src="imagens/equacao-solucao-incompleta2.webp" alt="">
+                
+            </div><br>
+
+            <!--Aqui e um paragrafo junto com um BR que faz com que pule linhas-->
+            <h2>-->Exemplo<-- </h2> <br>
+
+            <!--Aqui e um paragrafo junto com um BR que faz com que pule linhas-->
+            <p>Determine a solução da equação 5x2 – 45x = 0</p> <br>
+
+            <!--Aqui vai conter a imagem dos exemplos-->
+            <div id="Metodo" class="imagem-equaçao">
+                <!--Imagem de exemplo-->
+                <img src="imagens/exemplo-solucao-equacao-incompleta45.webp" alt="">
+                
+            </div><br>
+
+            <!--Aqui contem o titulo do conteudo-->
+            <h2>Método de solução para equações completas</h2> <br>
+
+            <!--Aqui e um paragrafo junto com um BR que faz com que pule linhas-->
+            <p>O método conhecido como método de Bhaskara ou <span
+            style="color: red;">fórmula de Bhaskara</span> aponta que as raízes de uma
+            equação do 2º grau do tipo ax2 + bx + c = 0 é dada pela seguinte relação:
+            </p><br>
+
+            <!--Aqui vai conter a imagem dos exemplos-->
+            <div class="imagem-equaçao">
+                <!--Imagem de exemplo-->
+                <img src="imagens/formula-de-bhaskara.webp" alt="">
+                
+            </div> <br>
+
+            <!--Aqui contem o titulo do conteudo-->
+            <h2>-->Exemplo<-- </h2><br>
+
+            <!--Aqui e um paragrafo junto com um BR que faz com que pule linhas-->
+            <p>Determine a solução da equação x2 – x – 12 = 0.</p><br>
+
+            <!--Aqui e um paragrafo junto com um BR que faz com que pule linhas-->
+            <p>Note que os coeficientes da equação são: a = 1; b= –
+             1 e c = – 12. Substituindo esses valores na fórmula de Bhaskara, temos:</p> <br>
+
+             <!--Aqui vai conter a imagem dos exemplos-->
+            <div id="Valor" class="imagem-equaçao">
+                <!--Imagem de exemplo-->
+                <img src="imagens/exemplo-solucao.webp" alt="">
+                
+            </div><br>
+
+            <!--Aqui e um paragrafo junto com um BR que faz com que pule linhas-->
+            <p>O delta (Δ) recebe o nome de discriminante e note que
+                ele está dentro de uma <span style="color: red;">raiz quadrada</span> e,
+                conforme sabemos, levando em conta os números reais, não é possível
+                extrair raiz quadrada de um número negativo.</p> <br>
+
+            <!--Aqui e um paragrafo junto com um BR que faz com que pule linhas-->
+            <p id="Sistema">Conhecendo o valor do discriminante, podemos realizar
+                algumas afirmações a respeito da solução da equação do 2º grau:</p> <br>
+
+            <!--Aqui e um paragrafo junto com um BR que faz com que pule linhas-->
+            <p> <strong> → discriminante positivo </strong> (Δ >
+                0): duas soluções para a equação;</p> <br>
+
+            <!--Aqui e um paragrafo junto com um BR que faz com que pule linhas-->    
+            <p> <strong> → discriminante igual a zero </strong>
+                (Δ = 0): as soluções da equação são repetidas;</p> <br>
+
+            <!--Aqui e um paragrafo junto com um BR que faz com que pule linhas-->
+            <p><strong> → discriminante negativo</strong> (Δ <
+                 0): não admite solução real.</p> <br> <br> <br>
+
+            <!--Aqui contem o titulo do conteudo-->
+            <h1 class="primeiro-titulo">Sistemas de equações do segundo grau</h1> <br>
+
+            <!--Aqui e um paragrafo junto com um BR que faz com que pule linhas-->
+            <p>Quando consideramos simultaneamente duas ou
+            mais equações, temos um sistema de equações. A solução de um
+            sistema de 2 variáveis é o conjunto de pares ordenados que
+            satisfaz simultaneamente todas as equações envolvidas.
+            </p> <br>
+
+            <!--Aqui contem o titulo do conteudo-->
+            <h2>-->Exemplo<-- </h2> <br>
+
+            <!--Aqui e um paragrafo junto com um BR que faz com que pule linhas-->
+            <p>Considere o sistema:</p> <br>
+
+            <!--Aqui vai conter a imagem dos exemplos-->
+            <div class="imagem-equaçao">
+                <!--Imagem de exemplo-->
+                <img src="imagens/equacao-solucao-sistema-equacoes (1).webp" alt="">
+                
+            </div><br>
+
+            <!--Aqui e um paragrafo junto com um BR que faz com que pule linhas-->
+            <p>Com os valores: x’ = 2, x’’ = – 2 e
+            y’ = 2, y’’ = – 2 podemos montar pares ordenados que
+            satisfazem as equações do sistema simultaneamente. Veja:
+             (2, 2), (2, – 2), (– 2, 2), (– 2, – 2).
+            </p> <br>
+
+            <!--Aqui e um paragrafo junto com um BR que faz com que pule linhas-->
+            <p>Lembre-se de que um par ordenado éescrito da forma (x, y).</p> <br>
+
+            <!--Aqui e um paragrafo junto com um BR que faz com que pule linhas-->
+            <p> Os métodos para encontrar a solução
+            de um sistema de equações são semelhantes ao de sistemaslineares.
+            </p> <br>
+
+            <!--Aqui contem o titulo do conteudo-->
+            <h2>-->Exemplo<-- </h2> <br>
+
+            <!--Aqui e um paragrafo junto com um BR que faz com que pule linhas-->
+            <p>Considere o sistema:</p> <br>
+
+            <!--Aqui vai conter a imagem dos exemplos-->
+            <div class="imagem-equaçao">
+                <!--Imagem de exemplo-->
+                <img src="imagens/equacao-sistema-exemplo1.webp"alt="">
+                
+            </div> <br>
+
+            <!--Aqui e um paragrafo junto com um BR que faz com que pule linhas-->
+            <p>Da equação x – y = 0, vamos isolar a incógnita x, assim:</p> <br>
+
+            <!--Aqui e um paragrafo junto com um BR que faz com que pule linhas-->
+            <p>x – y = 0</p> <br>
+
+            <!--Aqui e um paragrafo junto com um BR que faz com que pule linhas-->
+            <p> x = y</p> <br>
+
+            <!--Aqui e um paragrafo junto com um BR que faz com que pule linhas-->
+            <p>Agora devemos substituir o valor isolado na outra equação, assim:</p> <br>
+
+            <!--Aqui e um paragrafo junto com um BR que faz com que pule linhas-->
+            <p>x2 – x –12 = 0</p> <br>
+
+            <!--Aqui e um paragrafo junto com um BR que faz com que pule linhas-->
+            <p>y2 – y –12 = 0</p> <br>
+
+            <!--Aqui e um paragrafo junto com um BR que faz com que pule linhas-->
+            <p>Utilizando método de Bhaskara, temos que:</p> <br>
+
+            <!--Aqui vai conter a imagem dos exemplos-->
+            <div class="imagem-equaçao">
+                <!--Imagem de exemplo-->
+                <img src="imagens/equacao-sistema-solucao 24.webp"alt="">
+            
+            </div><br>
+
+            <!--Aqui e um paragrafo junto com um BR que faz com que pule linhas-->
+            <p>Como x = y, teremos que x’ = y’ e x’’ = y’’. Ou seja:</p> <br>
+
+            <!--Aqui e um paragrafo junto com um BR que faz com que pule linhas-->
+            <p>x’ = 4</p> <br>
+
+            <!--Aqui e um paragrafo junto com um BR que faz com que pule linhas-->
+            <p>x’’ = -3</p> <br>
+
+            <!--Aqui e um paragrafo junto com um BR que faz com que pule linhas-->
+            <p>Assim, os pares ordenados são soluções do sistema (4, 4) e (– 3,– 3).</p> <br>
+
+       </div> <br>
+    </div>
+
+    </aside>
+
+    <!--Aqui começa o main-->
+    <main class="corpo">
+
+        <div class="info-aside">
+            <!-- Parágrafo com texto "Conteúdo artigo" em vermelho -->
+            <p><span style="color: red;">Conteúdo artigo</span></p> <br>
+        
+            <!-- Lista ordenada com itens sobre tipos de equação do 2º grau -->
+            <ol>
+                <li> <a class="transition" style="text-decoration: none; color: black;" href="#Tipos">Tipos de Equação do 2 Grau</a></li> <br>
+                <li> <a style="text-decoration: none; color: black;" href="#Resolver">Como resolver equações de 2º grau ?</a></li> <br>
+                <li> <a style="text-decoration: none; color: black;" href="#Solucao">Método de solução para equações do tipo ax²+ c = 0</a></li> <br>
+                <li> <a style="text-decoration: none; color: black;" href="#Metodo">Método de solução para equações completas</a></li><br>
+                <li> <a style="text-decoration: none; color: black;" href="#Valor">Valor discriminante:</a></li>
+            </ol> <br>
+        
+            <!-- Lista não ordenada com itens sobre o valor discriminante -->
+            <ul>
+                <li> discriminante positivo</li>
+                <li> discriminante igual a zero </li>
+                <li> discriminante negativo</li>
+            </ul> <br>
+        
+            <!-- Cabeçalho com texto "Sistemas de equações do segundo grau" -->
+            <h4> <a style="text-decoration: none; color: black;" href="#Sistema">-->Sistemas de equações do segundo grau<--</a></h4>
+        
+        </div>
+        
+    </main>
+    <!--Aqui é o fim do main-->
+
+    <!--Aqui começa o Footer-->
+    <footer> 
+        <!--Aqui vai conter os icones das redes sociais-->
+        <div class="redes-sociais">
+            <!--Icone das redes sociais-->
+            <i class="fa-brands fa-instagram"></i>
+            <!--Icone das redes sociais-->
+            <i class="fa-brands fa-github"></i>
+            <!--Icone das redes sociais-->
+            <i class="fa-brands fa-whatsapp"></i>
+            <!--Icone das redes sociais-->
+            <i class="fa-brands fa-twitter"></i>
+        </div>
+
+        <!--Aqui vai conter os links para outras paginas-->
+        <ul class="link">
+            <!--Link para outras paginas-->
+            <li><a href="#">Email</a></li>
+            <!--Link para outras paginas-->
+            <li><a href="#">Sobre</a></li>
+            <!--Link para outras paginas-->
+            <li><a href="#">Contatos</a></li>
+            <!--Link para outras paginas-->
+            <li><a href="#">Serviços</a></li>
+            <!--Link para outras paginas-->
+            <li><a href="#">História</a></li>
+        </ul>
+        <!--Aqui vai ter a linha que criamos no css-->
+        <div class="line"></div>
+        <!--Aqui e um paragrafo de direitos autorais-->
+        <p class="creditos">&#169
+            2023 Todos os direitos reservados</p>
+    </footer>
+    <!--Aqui é o fim do Footer-->
+
+    <!--Aqui tem o arquivo Javascript-->
+    <script src="script.js"></script>
+    
+</body>
+<!--Aqui é o fim do Body-->
+
+</html>

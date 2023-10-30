@@ -1,0 +1,238 @@
+<!--Identifica o HTML5-->
+<!DOCTYPE html>
+
+<!--colocamos nossa pagina em portugues Brasil-->
+<html lang="pt-br">
+
+<!--Head é a aba do browser-->
+
+<head>
+    <!--Nos permite usar caracteres especiais-->
+    <meta charset="UTF-8">
+    <!--Utiizada para configurar a pagina web, para que sempre esteja na sua versao mais recente-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--é usado para que o site web se enquadre proporcionalmente nas telas de celulares-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Identifica o CSS para que possamos usá-lo no nosso HTML-->
+    <link rel="stylesheet" href="style.css">
+    <!--identifica as imagens em codigo-->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <!--Identifica os icons atráves de codigo-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--Imagem do brasão pequenininho na aba-->
+    <link rel="shortcut icon" href="imagens/logo.png">
+    <!--Nome da aba do browser-->
+    <title>Créditos</title>
+</head>
+
+<body class="card-principal">
+
+    <header class="header-principal">
+
+        <!--Aqui contem o titulo do conteudo-->
+        <h1 class="titulos-creditos">DESENVOLVEDORES:</h1> <br> <br>
+
+    </header>
+
+    <main class="main-principal">
+
+        <div class="container">
+            <div class="card">
+                <div class="imgbx">
+                    <img class="imagem-01" src="imagens/programador-1.jpg" alt="">
+                </div>
+                <div class="content">
+                    <h2>Lucas Eduardo Zarza de Barros</h2>
+                    <p>Desenvolvedor, 16 anos de idade.</p> <br>
+                    <button><a href="Luquinhas.html" target="_blank">Sobre</a></button>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="imgbx">
+                    <img class="imagem-01" src="imagens/programador-4.jpg" alt="">
+                </div>
+                <div class="content">
+                    <h2>Gustavo Henrique Buratti Bernardi</h2>
+                    <p>Desenvolvedor, 16 anos de idade.</p> <br>
+                    <button><a href="portfolio-gustavinho.html" target="_blank">Sobre</a></button>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!--Aqui começa o Footer-->
+    <footer style="background-color: #13293D;">
+        <!--Aqui vai conter os icones das redes sociais-->
+        <div class="redes-sociais">
+            <!--Icone das redes sociais-->
+            <i class="fa-brands fa-instagram"></i>
+            <!--Icone das redes sociais-->
+            <i class="fa-brands fa-github"></i>
+            <!--Icone das redes sociais-->
+            <i class="fa-brands fa-whatsapp"></i>
+            <!--Icone das redes sociais-->
+            <i class="fa-brands fa-twitter"></i>
+        </div>
+
+        <!--Aqui vai conter os links para outras paginas-->
+        <ul class="link">
+            <!--Link para outras paginas-->
+            <li><a href="#">Email</a></li>
+            <!--Link para outras paginas-->
+            <li><a href="#">Sobre</a></li>
+            <!--Link para outras paginas-->
+            <li><a href="#">Contatos</a></li>
+            <!--Link para outras paginas-->
+            <li><a href="#">Serviços</a></li>
+            <!--Link para outras paginas-->
+            <li><a href="#">História</a></li>
+        </ul>
+        <!--Aqui vai ter a linha que criamos no css-->
+        <div class="line"></div>
+        <!--Aqui e um paragrafo de direitos autorais-->
+        <p class="creditos">&#169
+            2023 Todos os direitos reservados</p>
+    </footer>
+    <!--Aqui é o fim do Footer-->
+
+    <style>
+        .card-principal {
+            display: grid;
+            grid-template-areas:
+                "titu titu titu"
+                "tutu tutu tutu"
+                "fund fund fund";
+            grid-template-columns: auto auto auto;
+            grid-template-rows: auto auto auto;
+            grid-gap: 2rem;
+            background-color: #13293D;
+        }
+
+        /*-----------------------------------------------------------------------------------------------------------------------------------------------*/
+
+        .header-principal {
+            position: relative;
+            grid-area: titu;
+            text-align: center;
+            background-color: #13293D;
+        }
+
+        .titulos-creditos {
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: -5px;
+            color: #fff;
+        }
+
+        /*-----------------------------------------------------------------------------------------------------------------------------------------------*/
+
+        .main-principal {
+            grid-area: tutu;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 100px 50px;
+        }
+
+        .container .card {
+            position: relative;
+            border-radius: 20px;
+            box-shadow: 1px 1px 20px #012290f7,
+                1px 1px 40px #0053b8f7;
+            width: 350px;
+            height: 400px;
+            background: transparent;
+            color: #fff;
+            transition: .5s;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        .container .card:hover {
+            height: 500px;
+        }
+
+        .container .card .imgbx {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: #333;
+            border-radius: 12px;
+            overflow: hidden;
+            top: 20px;
+            transition: .5s;
+        }
+
+        .container .card .imgbx .imagem-01 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .container .card .content {
+            position: absolute;
+            top: 350px;
+            width: 100%;
+            height: 35px;
+            text-align: center;
+            padding: 0 30px;
+            overflow: hidden;
+            transition: .5s;
+        }
+
+        .container .card:hover .content {
+            top: 250px;
+            height: 250px;
+        }
+
+        .container .card .content h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            line-height: 3rem;
+        }
+
+        .container .card .content a {
+            display: inline-block;
+        }
+
+        .container .card:hover .imgbx {
+            top: -60px;
+            scale: .75;
+            box-shadow: 0 15px 45px rgba(0, 0, 0, .2);
+        }
+
+
+        /*-----------------------------------------------------------------------------------------------------------------------------------------------*/
+
+        button {
+            text-align: center;
+            width: 80%;
+            padding: 10px;
+            margin-bottom: 10px;
+            background-color: #0ef;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        a{
+            text-decoration: none;
+            color: black;
+        }
+    </style>
+</body>
+
+</html>
