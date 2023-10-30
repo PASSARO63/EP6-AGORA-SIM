@@ -15,6 +15,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--Identifica o CSS para que possamos usá-lo no nosso HTML-->
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!--identifica as imagens em codigo-->
     <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
     <!--Identifica os icons atráves de codigo-->
@@ -71,7 +72,7 @@
     <main class="main-exercicios">
 
         <!--Titulo-->
-        <h1>Questionário</h1>
+        <h1 id="volta">Questionário</h1>
 
         <!--Aqui vai conter todas as informações do questionario-->
         <div class="exercicios-div">
@@ -94,7 +95,7 @@
             <p class="grafico" id="imagem-1"></p> <br>
 
             <!--Adicionei um botão-->
-            <button><a href="Calculadora.html" target="_blank">Calculadora</a></button> <br> <br>
+            <button><a onclick="certeza()" href="Calculadora.html" target="_blank">Calculadora</a></button> <br> <br>
 
             <!--Aqui e o titulo da pergunta junto com um BR para pular linha-->
             <p>2. Encontre as raízes da equação 2x² + 5x - 3 = 0.</p> <br> <br>
@@ -261,8 +262,8 @@
             <!--Aqui vai conter o botão de enviar as respostas-->
             <div class="butao-quest">
                 <!--Aqui vai contem o botão para enviar as respostas do usuario-->
-                <a href="#" onclick="verificarRespostas()" class="button-exercicio">Enviar</a> <br> <br> <br>
-            </div>
+                <a href="#volta" onclick="verificarRespostas()" class="button-exercicio">Enviar</a> <br> <br> <br>
+            </div> <br>
 
             <!--Aqui vai conter quantos acertos o usuario conquistou-->
             <p class="acertos" id="quantos_acertos"></p> <br> <br>
@@ -309,6 +310,7 @@
 
     <!--Aqui tem o arquivo Javascript-->
     <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <!--Aqui tem um style-->
     <style>

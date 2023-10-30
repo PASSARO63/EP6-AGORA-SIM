@@ -13,6 +13,20 @@ function inclui_nome() {
     }
 }
 
+function exerci() {
+    Swal.fire({
+        title: 'Seja bem vindo! Você tem 10 minutos para resolver esses exercícios.',
+        showClass: {
+            popup: 'animate__animated animate__fadeInDown'
+        },
+        hideClass: {
+            popup: 'animate__animated animate__fadeOutUp'
+        }
+    })
+}
+
+
+
 //-------------------------------------------------------------------------------------------------------------------------------------------------------------
 /*Aqui começa o javascript do Landing Page*/
 
@@ -174,14 +188,48 @@ function funcao_resposta() {
         /*Colocamos um ELSE para quando o ususario clicar na opção errada aparecer o porque ela errou*/
         else {
             document.getElementById("resp_errada_10").innerHTML = "Errada, o nome dado às raízes diferentes em uma equação de segundo grau é raízes distintas"
+
+            //Aqui e para mostrar quantas questões o usuario acertou
+            document.getElementById("quantos_acertos").innerHTML = "Você acertou " + contador + " questões!";
         }
 
-        //Aqui e para mostrar quantas questões o usuario acertou
-        document.getElementById("quantos_acertos").innerHTML = "Você acertou " + contador + " questões!";
+        if (funcao_resposta) {
+            const Toast = Swal.mixin({
+                toast: true,
+                position: 'top-end',
+                showConfirmButton: false,
+                timer: 3000,
+                timerProgressBar: true,
+                didOpen: (toast) => {
+                    toast.addEventListener('mouseenter', Swal.stopTimer)
+                    toast.addEventListener('mouseleave', Swal.resumeTimer)
+                }
+            })
+
+            Toast.fire({
+                icon: 'success',
+                title: 'Resposta resgistrada'
+            })
+        }
+
     }
-    /*Colocamos um else para que o usuario não deixe as questões em branco*/
     else {
-        alert("Não deixe questões em branco!")
+        const Toast = Swal.mixin({
+            toast: true,
+            position: 'top-end',
+            showConfirmButton: false,
+            timer: 3000,
+            timerProgressBar: true,
+            didOpen: (toast) => {
+                toast.addEventListener('mouseenter', Swal.stopTimer)
+                toast.addEventListener('mouseleave', Swal.resumeTimer)
+            }
+        })
+
+        Toast.fire({
+            icon: 'error',
+            title: 'Não deixe resposta em branco, por favor!'
+        })
     }
 
 }
@@ -387,9 +435,45 @@ function verificarRespostas() {
             //Aqui e para ver quantas questões o usuario acertou
             document.getElementById("quantos_acertos").innerHTML = "Você acertou " + contador + " questões!";
         }
+
+        if (verificarRespostas) {
+            const Toast = Swal.mixin({
+                toast: true,
+                position: 'top-end',
+                showConfirmButton: false,
+                timer: 3000,
+                timerProgressBar: true,
+                didOpen: (toast) => {
+                    toast.addEventListener('mouseenter', Swal.stopTimer)
+                    toast.addEventListener('mouseleave', Swal.resumeTimer)
+                }
+            })
+
+            Toast.fire({
+                icon: 'success',
+                title: 'Resposta resgistrada'
+            })
+        }
+
     }
+
     else {
-        alert("Não deixe questões em branco!");
+        const Toast = Swal.mixin({
+            toast: true,
+            position: 'top-end',
+            showConfirmButton: false,
+            timer: 3000,
+            timerProgressBar: true,
+            didOpen: (toast) => {
+                toast.addEventListener('mouseenter', Swal.stopTimer)
+                toast.addEventListener('mouseleave', Swal.resumeTimer)
+            }
+        })
+
+        Toast.fire({
+            icon: 'error',
+            title: 'Não deixe resposta em branco, por favor!'
+        })
     }
 }
 
@@ -406,21 +490,21 @@ function mudar(objeto, imagem) {
 }
 
 javascript
-    // Espera até que o documento esteja pronto
-    $(function () {
-        var stopPoint = 500; // ponto em que a div deve parar de acompanhar a tela
+// Espera até que o documento esteja pronto
+$(function () {
+    var stopPoint = 500; // ponto em que a div deve parar de acompanhar a tela
 
-        // Monitora o evento de rolagem da janela
-        $(window).scroll(function () {
-            var scrollTop = $(this).scrollTop(); // Obtém a posição atual de rolagem da página
+    // Monitora o evento de rolagem da janela
+    $(window).scroll(function () {
+        var scrollTop = $(this).scrollTop(); // Obtém a posição atual de rolagem da página
 
-            // Verifica se a posição de rolagem ultrapassou o ponto definido
-            if (scrollTop >= stopPoint) {
-                $('.info-aside').addClass('stopped'); // Adiciona a classe 'stopped' à div 'info-aside'
-            } else {
-                $('.info-aside').removeClass('stopped'); // Remove a classe 'stopped' da div 'info-aside'
-            }
-        });
+        // Verifica se a posição de rolagem ultrapassou o ponto definido
+        if (scrollTop >= stopPoint) {
+            $('.info-aside').addClass('stopped'); // Adiciona a classe 'stopped' à div 'info-aside'
+        } else {
+            $('.info-aside').removeClass('stopped'); // Remove a classe 'stopped' da div 'info-aside'
+        }
+    });
 });
 
 
