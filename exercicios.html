@@ -27,7 +27,7 @@
     <title>EXERCÍCIOS</title>
 </head>
 
-<body class="principal-exercicio" onload="exercicio()">
+<body class="principal-exercicio">
 
     <!--Aqui começa o header-->
     <header class="header-principal">
@@ -73,7 +73,7 @@
         <!--Titulo-->
         <h1 class="primeiro-titulo">Exercícios de revisão</h1> <br> <br> <br> <br>
 
-        <p class="primeiro-titulo" style="color: red;">Você tem 20 minutos para resolver essas atividades</p> <br>
+        <p class="primeiro-titulo" style="color: red;">Você tem 2 minutos para resolver essas atividades</p> <br>
 
         <div style="text-align: center; font-size: 30px; border: 1px solid black;" id="timer"></div> <br> <br> <br>
 
@@ -462,7 +462,7 @@
 
         window.onload = function () {
 
-            var duration = 60 * 20; // conversão para segundos
+            var duration = 60 * 2; // conversão para segundos
             var display = document.querySelector("#timer"); // Elemento para exibir o timer
 
             startTimer(duration, display); // inicia a função

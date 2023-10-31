@@ -27,7 +27,7 @@
     <title>Questionário</title>
 </head>
 
-<body onload="exerci()" class="questionário">
+<body class="questionário">
 
     <!--Aqui começa o header-->
     <header class="header-principal">
@@ -73,7 +73,7 @@
         <!--Titulo-->
         <h1 id="volta">Questionário</h1> <br> <br> <br>
 
-        <p class="primeiro-titulo" style="color: red;">Você tem 20 minutos para resolver essas atividades</p> <br>
+        <p class="primeiro-titulo" style="color: red;">Você tem 2 minutos para resolver essas atividades</p> <br>
 
         <div style="text-align: center; font-size: 30px; border: 1px solid black;" id="timer"></div> <br> <br>
 
@@ -98,7 +98,7 @@
             <p class="grafico" id="imagem-1"></p> <br>
 
             <!--Adicionei um botão-->
-            <button><a href="Calculadora.html" onclick="certeza()" target="_blank">Calculadora</a></button> <br> <br>
+            <button><a href="Calculadora.html" target="_blank">Calculadora</a></button> <br> <br>
 
             <!--Aqui e o titulo da pergunta junto com um BR para pular linha-->
             <p>2. Encontre as raízes da equação 2x² + 5x - 3 = 0.</p> <br> <br>
@@ -382,7 +382,7 @@
 
         window.onload = function () {
 
-            var duration = 60 * 20; // conversão para segundos
+            var duration = 60 * 2; // conversão para segundos
             var display = document.querySelector("#timer"); // Elemento para exibir o timer
 
             startTimer(duration, display); // inicia a função
