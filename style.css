@@ -294,6 +294,21 @@ main h1 {
     color: black;
 }
 
+.top {
+    top: 85%;
+    position: fixed;
+    bottom: 2.2rem;
+    right: 2.1rem;
+}
+
+.top i {
+    color: #0ef;
+    background: rgb(88, 88, 88);
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 0.5rem;
+}
+
 /*-----------------------------------------------------------------------------------------------------------------------------------------------*/
 
 /*-----------------------------------------------------------------------------------------------------------------------------------------------*/
@@ -1105,6 +1120,11 @@ main .esquerda h1 {
             "fund fund fund";
         grid-template-columns: 3fr;
         grid-template-rows: 150px auto auto;
+    }
+
+
+    .top{
+        display: none;
     }
 
     /*Colocamos uma altura e largura para o elemnto e tiramos a sombra*/
