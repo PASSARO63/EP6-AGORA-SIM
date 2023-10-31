@@ -15,7 +15,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--Identifica o CSS para que possamos usá-lo no nosso HTML-->
     <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!--identifica as imagens em codigo-->
     <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
     <!--Identifica os icons atráves de codigo-->
@@ -28,7 +27,7 @@
     <title>Questionário</title>
 </head>
 
-<body class="questionário">
+<body onload="exerci()" class="questionário">
 
     <!--Aqui começa o header-->
     <header class="header-principal">
@@ -72,7 +71,11 @@
     <main class="main-exercicios">
 
         <!--Titulo-->
-        <h1 id="volta">Questionário</h1>
+        <h1 id="volta">Questionário</h1> <br> <br> <br>
+
+        <p class="primeiro-titulo" style="color: red;">Você tem 20 minutos para resolver essas atividades</p> <br>
+
+        <div style="text-align: center; font-size: 30px; border: 1px solid black;" id="timer"></div> <br> <br>
 
         <!--Aqui vai conter todas as informações do questionario-->
         <div class="exercicios-div">
@@ -95,7 +98,7 @@
             <p class="grafico" id="imagem-1"></p> <br>
 
             <!--Adicionei um botão-->
-            <button><a onclick="certeza()" href="Calculadora.html" target="_blank">Calculadora</a></button> <br> <br>
+            <button><a href="Calculadora.html" onclick="certeza()" target="_blank">Calculadora</a></button> <br> <br>
 
             <!--Aqui e o titulo da pergunta junto com um BR para pular linha-->
             <p>2. Encontre as raízes da equação 2x² + 5x - 3 = 0.</p> <br> <br>
@@ -270,8 +273,9 @@
 
         </div>
 
-    </main>
 
+
+    </main>
 
     <!--Aqui começa o Footer-->
     <footer>
@@ -309,8 +313,82 @@
     <!--Aqui é o fim do Footer-->
 
     <!--Aqui tem o arquivo Javascript-->
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script>
+        /*Colocamos uma função para o usuario poder ver o tempo da pagina de exercício*/
+        function startTimer(duration, display) {
+
+            /*Chamei uma variavel*/
+            var timer = duration, minutes, seconds;
+            /*Chamei uma variavel*/
+            var interval;
+            /*Chamei uma variavel*/
+            var isTimeUp = false;
+
+            // Função que será chamada a cada segundo
+            setInterval(function () {
+
+                if (isTimeUp) {
+                    clearInterval(interval);
+                    return;
+                }
+
+                // Divide o tempo restante em minutos e segundos
+                minutes = parseInt(timer / 60, 10);
+                seconds = parseInt(timer % 60, 10);
+
+                // Formata os minutos e segundos para terem sempre dois dígitos
+                minutes = minutes < 10 ? "0" + minutes : minutes;
+
+                seconds = seconds < 10 ? "0" + seconds : seconds;
+
+                // Exibe o tempo restante no elemento especificado
+                display.textContent = minutes + ":" + seconds;
+
+                // Verifica se o tempo chegou a zero
+                if (--timer < 0) {
+                    clearInterval(interval);
+                    display.textContent = "Seu tempo acabou!";
+                    showErrorMessage();
+                    isTimeUp = true;
+                }
+
+
+            }, 1000)
+
+        }
+
+        function showErrorMessage() {
+            const Toast = Swal.mixin({
+                toast: true,
+                position: 'top-end',
+                showConfirmButton: false,
+                timer: 3000,
+                timerProgressBar: true,
+                didOpen: (toast) => {
+                    toast.addEventListener('mouseenter', Swal.stopTimer)
+                    toast.addEventListener('mouseleave', Swal.resumeTimer)
+                }
+            })
+
+            // Mostra uma mensagem de erro com um ícone e um título
+            Toast.fire({
+                icon: 'error',
+                title: 'Seu tempo acabou'
+            })
+        }
+
+        window.onload = function () {
+
+            var duration = 60 * 20; // conversão para segundos
+            var display = document.querySelector("#timer"); // Elemento para exibir o timer
+
+            startTimer(duration, display); // inicia a função
+
+        }
+    </script>
 
     <!--Aqui tem um style-->
     <style>

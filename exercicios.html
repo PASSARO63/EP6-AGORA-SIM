@@ -27,7 +27,7 @@
     <title>EXERCÍCIOS</title>
 </head>
 
-<body onload="exerci()" class="principal-exercicio">
+<body class="principal-exercicio" onload="exercicio()">
 
     <!--Aqui começa o header-->
     <header class="header-principal">
@@ -71,7 +71,11 @@
     <main class="main-exercicios">
 
         <!--Titulo-->
-        <h1 class="primeiro-titulo">Exercícios de revisão</h1> <br> <br>
+        <h1 class="primeiro-titulo">Exercícios de revisão</h1> <br> <br> <br> <br>
+
+        <p class="primeiro-titulo" style="color: red;">Você tem 20 minutos para resolver essas atividades</p> <br>
+
+        <div style="text-align: center; font-size: 30px; border: 1px solid black;" id="timer"></div> <br> <br> <br>
 
         <!--Aqui vai ter as informações do exercicio-->
         <div class="exercicios-div">
@@ -391,6 +395,80 @@
     <!--Aqui tem o arquivo Javascript-->
     <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script>
+        /*Colocamos uma função para o usuario poder ver o tempo da pagina de exercício*/
+        function startTimer(duration, display) {
+
+            /*Chamei uma variavel*/
+            var timer = duration, minutes, seconds;
+            /*Chamei uma variavel*/
+            var interval;
+            /*Chamei uma variavel*/
+            var isTimeUp = false;
+
+            // Função que será chamada a cada segundo
+            setInterval(function () {
+
+                if (isTimeUp) {
+                    clearInterval(interval);
+                    return;
+                }
+
+                // Divide o tempo restante em minutos e segundos
+                minutes = parseInt(timer / 60, 10);
+                seconds = parseInt(timer % 60, 10);
+
+                // Formata os minutos e segundos para terem sempre dois dígitos
+                minutes = minutes < 10 ? "0" + minutes : minutes;
+
+                seconds = seconds < 10 ? "0" + seconds : seconds;
+
+                // Exibe o tempo restante no elemento especificado
+                display.textContent = minutes + ":" + seconds;
+
+                // Verifica se o tempo chegou a zero
+                if (--timer < 0) {
+                    clearInterval(interval);
+                    display.textContent = "Seu tempo acabou!";
+                    showErrorMessage();
+                    isTimeUp = true;
+                }
+
+
+            }, 1000)
+
+        }
+
+        function showErrorMessage() {
+            const Toast = Swal.mixin({
+                toast: true,
+                position: 'top-end',
+                showConfirmButton: false,
+                timer: 3000,
+                timerProgressBar: true,
+                didOpen: (toast) => {
+                    toast.addEventListener('mouseenter', Swal.stopTimer)
+                    toast.addEventListener('mouseleave', Swal.resumeTimer)
+                }
+            })
+
+            // Mostra uma mensagem de erro com um ícone e um título
+            Toast.fire({
+                icon: 'error',
+                title: 'Seu tempo acabou'
+            })
+        }
+
+        window.onload = function () {
+
+            var duration = 60 * 20; // conversão para segundos
+            var display = document.querySelector("#timer"); // Elemento para exibir o timer
+
+            startTimer(duration, display); // inicia a função
+
+        }
+    </script>
 </body>
 
 </html>

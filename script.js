@@ -1,10 +1,11 @@
+
 /*Colocamos uma função para o usuario colocar seu nome e aparecer na pagina*/
 function inclui_nome() {
     /*Chamei uma variavel*/
     var nome_variavel = prompt("Coloque seu nome:");
     /*Colocamos um IF para aparecer o nome do usuario + um Bem vindo*/
     if (nome_variavel) {
-        document.getElementById("marcacao_nome").innerHTML = "Seja bem-vindo(a): " + nome_variavel;
+        document.getElementById("marcacao_nome").innerHTML = "Seja bem-vindo " + nome_variavel + " ,ao nosso site de matemática, onde tornamos o aprendizado divertido e acessível para todos. ";
     }
     /*Se o usuario não preencher o campo de nome o ELSE vai ativar e vai aparecer o alerta */
     else {
@@ -13,17 +14,9 @@ function inclui_nome() {
     }
 }
 
-function exerci() {
-    Swal.fire({
-        title: 'Seja bem vindo! Você tem 10 minutos para resolver esses exercícios.',
-        showClass: {
-            popup: 'animate__animated animate__fadeInDown'
-        },
-        hideClass: {
-            popup: 'animate__animated animate__fadeOutUp'
-        }
-    })
-}
+//-------------------------------------------------------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 
 
 
@@ -193,6 +186,8 @@ function funcao_resposta() {
             document.getElementById("quantos_acertos").innerHTML = "Você acertou " + contador + " questões!";
         }
 
+        
+    //*Verifica as respostas, um alerta*//
         if (funcao_resposta) {
             const Toast = Swal.mixin({
                 toast: true,
@@ -213,6 +208,9 @@ function funcao_resposta() {
         }
 
     }
+
+    
+    //*Verifica as respostas se foram enviadas, um alerta*//
     else {
         const Toast = Swal.mixin({
             toast: true,
@@ -436,6 +434,7 @@ function verificarRespostas() {
             document.getElementById("quantos_acertos").innerHTML = "Você acertou " + contador + " questões!";
         }
 
+        //*Verifica as respostas um alerta*//
         if (verificarRespostas) {
             const Toast = Swal.mixin({
                 toast: true,
@@ -457,6 +456,7 @@ function verificarRespostas() {
 
     }
 
+    //*Verifica as respostas se foram enviadas, um alerta*//
     else {
         const Toast = Swal.mixin({
             toast: true,
@@ -506,5 +506,6 @@ $(function () {
         }
     });
 });
+
 
 
